@@ -1,0 +1,513 @@
+/* ===========================================
+   Colors & Backgrounds
+=========================================== */
+
+/* 1. Set the text color of a paragraph to blue. */
+
+p{
+    color: blue;
+}
+
+/*
+Apply to any <p> element.
+*/
+
+
+/* 2. Change the background color of a div to light gray. */
+
+div{
+    background-color: lightgray;
+}
+
+/*
+Apply to any <div> element.
+*/
+
+
+/* 3. Add a background image to the body. */
+
+body{
+    background-image: url("background.jpg");
+}
+
+/*
+Replace "background.jpg" with your own image.
+*/
+
+
+/* 4. Make the background image cover the entire page. */
+
+body{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/*
+Makes the image fill the entire screen.
+*/
+
+
+/* 5. Change the opacity of an element. */
+
+.box{
+    opacity: 0.5;
+}
+
+/*
+Opacity ranges from 0 to 1.
+*/
+
+
+/* ===========================================
+   Typography
+=========================================== */
+
+/* 6. Change the font size of a heading. */
+
+h1{
+    font-size: 36px;
+}
+
+
+/* 7. Make a paragraph bold. */
+
+p{
+    font-weight: bold;
+}
+
+
+/* 8. Italicize a piece of text. */
+
+p{
+    font-style: italic;
+}
+
+
+/* 9. Center-align a heading. */
+
+h1{
+    text-align: center;
+}
+
+
+/* 10. Change the font family of the page. */
+
+body{
+    font-family: Arial, sans-serif;
+}
+
+
+/* ===========================================
+   Box Model
+=========================================== */
+
+/* 11. Add 20px padding to a div. */
+
+div{
+    padding: 20px;
+}
+
+
+/* 12. Add a 2px solid black border around a box. */
+
+.box{
+    border: 2px solid black;
+}
+
+
+/* 13. Add 30px margin to the top of an element. */
+
+.box{
+    margin-top: 30px;
+}
+
+
+/* 14. Create a square box with equal width and height. */
+
+.box{
+    width: 200px;
+    height: 200px;
+}
+
+
+/* 15. Round the corners of a box. */
+
+.box{
+    border-radius: 10px;
+}
+
+
+/* ===========================================
+   Display & Position
+=========================================== */
+
+/* 16. Hide an element using CSS. */
+
+.box{
+    display: none;
+}
+
+
+/* 17. Display elements side by side using Flexbox. */
+
+.container{
+    display: flex;
+}
+
+
+/* 18. Center an element horizontally. */
+
+.box{
+    width: 200px;
+    margin: 0 auto;
+}
+
+
+/* 19. Center an element both horizontally and vertically using Flexbox. */
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* 20. Make an element fixed at the top of the page. */
+
+.navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+
+/* ===========================================
+   Flexbox Basics
+=========================================== */
+
+/* 21. Create a flex container. */
+
+.container{
+    display: flex;
+}
+
+
+/* 22. Align items vertically in the center. */
+
+.container{
+    display: flex;
+    align-items: center;
+}
+
+
+/* 23. Space items evenly across the container. */
+
+.container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+/* 24. Change the direction of flex items to column. */
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* 25. Allow flex items to wrap. */
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* ===========================================
+   Grid Basics
+=========================================== */
+
+/* 26. Create a two-column grid. */
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/*
+Apply to a grid container.
+*/
+
+
+/* 27. Create three equal columns. */
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/*
+Creates three equal-width columns.
+*/
+
+
+/* 28. Add spacing between grid items. */
+
+.container{
+    display: grid;
+    gap: 20px;
+}
+
+/*
+Gap adds spacing between rows and columns.
+*/
+
+
+/* 29. Make one item span two columns. */
+
+.item{
+    grid-column: span 2;
+}
+
+/*
+Makes the item occupy two columns.
+*/
+
+
+/* 30. Center items inside a grid. */
+
+.container{
+    display: grid;
+    place-items: center;
+}
+
+/*
+Centers items both horizontally and vertically.
+*/
+
+
+/* ===========================================
+   Pseudo Classes & Effects
+=========================================== */
+
+/* 31. Change a button color when hovered. */
+
+button:hover{
+    background-color: blue;
+    color: white;
+}
+
+
+/* 32. Style the first child of a list. */
+
+li:first-child{
+    color: red;
+    font-weight: bold;
+}
+
+
+/* 33. Change the color of visited links. */
+
+a:visited{
+    color: purple;
+}
+
+
+/* 34. Remove underline from links. */
+
+a{
+    text-decoration: none;
+}
+
+
+/* 35. Add a smooth transition to a button hover. */
+
+button{
+    transition: all 0.3s ease;
+}
+
+button:hover{
+    background-color: green;
+}
+
+
+/* ===========================================
+   Responsive Design
+=========================================== */
+
+/* 36. Write a media query for screens smaller than 768px. */
+
+@media (max-width: 768px){
+
+    body{
+        background-color: #f5f5f5;
+    }
+
+}
+
+/*
+Styles inside this block apply only on screens
+768px wide or smaller.
+*/
+
+
+/* 37. Make an image responsive. */
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* 38. Change the layout from row to column on mobile. */
+
+.container{
+    display: flex;
+}
+
+@media (max-width: 768px){
+
+    .container{
+        flex-direction: column;
+    }
+
+}
+
+
+/* 39. Hide an element only on mobile devices. */
+
+@media (max-width: 768px){
+
+    .mobile-hide{
+        display: none;
+    }
+
+}
+
+
+/* 40. Set the viewport width correctly in HTML.
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+*/
+
+
+/* ===========================================
+   Animations
+=========================================== */
+
+/* 41. Create a simple fade-in animation. */
+
+.fade{
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+
+}
+
+
+/* 42. Rotate an element on hover. */
+
+.box:hover{
+    transform: rotate(45deg);
+}
+
+
+/* 43. Scale a button when hovered. */
+
+button:hover{
+    transform: scale(1.1);
+}
+
+
+/* 44. Move an element from left to right using keyframes. */
+
+.box{
+    animation: moveRight 2s linear;
+}
+
+@keyframes moveRight{
+
+    from{
+        transform: translateX(0);
+    }
+
+    to{
+        transform: translateX(200px);
+    }
+
+}
+
+
+/* 45. Create an infinite loading animation. */
+
+.loader{
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin{
+
+    from{
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* ===========================================
+   Miscellaneous
+=========================================== */
+
+/* 46. Add a box shadow to an element. */
+
+.box{
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* 47. Add a text shadow to a heading. */
+
+h1{
+    text-shadow: 2px 2px 5px gray;
+}
+
+
+/* 48. Make an image circular. */
+
+img{
+    border-radius: 50%;
+}
+
+
+/* 49. Change the mouse cursor when hovering over a button. */
+
+button{
+    cursor: pointer;
+}
+
+
+/* 50. Make a sticky navigation bar. */
+
+.navbar{
+    position: sticky;
+    top: 0;
+}
+
+/*
+The navbar will stick to the top while scrolling.
+*/

@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>NSDAHR — Educational Resource Platform for Web Developers & Students</title>
+<meta name="description" content="NSDAHR (NSDA Helpful Resources) is an interactive educational platform with organized HTML, CSS, and JavaScript Questions & Answers, interview prep, and practice materials for NSDA students." />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: '#84cc16',
+          secondary: '#bef264',
+          accent: '#fef9c3',
+          ink: '#0f172a',
+          muted: '#64748b',
+          card: '#f8fafc',
+        },
+        fontFamily: {
+          sans: ['Inter', 'sans-serif'],
+          mono: ['JetBrains Mono', 'monospace'],
+        },
+        boxShadow: {
+          soft: '0 2px 8px rgba(15,23,42,0.04), 0 8px 24px rgba(15,23,42,0.06)',
+          softer: '0 1px 3px rgba(15,23,42,0.04)',
+          lift: '0 12px 32px rgba(132,204,22,0.18), 0 4px 12px rgba(15,23,42,0.06)',
+          glow: '0 0 0 1px rgba(132,204,22,0.15), 0 8px 30px rgba(132,204,22,0.15)',
+        },
+        borderRadius: {
+          '4xl': '2rem',
+          '5xl': '2.5rem',
+        },
+      }
+    }
+  }
+</script>
+
+<link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="bg-white text-ink antialiased">
+
+<!-- ================= NAVBAR ================= -->
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-[72px]">
+    <a href="#home" class="flex items-center gap-2.5 shrink-0">
+      <div class="flex flex-col">
+        <span class="font-extrabold text-lg tracking-tight leading-none"><abbr title="NSDA Helpful Resources" class="no-underline">NSDAHR</abbr></span>
+        <span class="text-[10px] text-muted font-medium tracking-wider uppercase">Managed by alrifatsabbir</span>
+      </div>
+    </a>
+
+    <div class="hidden md:flex items-center gap-8 text-[15px] font-medium text-ink/80">
+      <a href="#home" class="nav-link hover:text-ink">Home</a>
+      <a href="#topics" class="nav-link hover:text-ink">Topics</a>
+      <a href="#features" class="nav-link hover:text-ink">Features</a>
+      <a href="#qa-preview" class="nav-link hover:text-ink">Practice Q&A</a>
+      <a href="#faq" class="nav-link hover:text-ink">FAQ</a>
+    </div>
+
+    <div class="hidden sm:flex items-center gap-3">
+      <a href="https://github.com/alrifatsabbir/nsdahr.git" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-semibold text-ink bg-slate-100 hover:bg-slate-200 border border-slate-200 px-3.5 py-2.5 rounded-full transition-colors">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+        Star on GitHub
+      </a>
+      <a href="/docs/docs.html" class="btn-primary btn-ripple inline-flex items-center gap-2 text-white font-semibold text-sm px-5 py-2.5 rounded-full">
+        Explore Learning Hub
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<section id="home" class="relative pt-40 pb-28 lg:pt-48 lg:pb-32 overflow-hidden">
+  <div class="absolute inset-0 hero-grid"></div>
+  <div class="blob w-72 h-72 bg-secondary/60 top-10 -left-10"></div>
+  <div class="blob w-96 h-96 bg-accent top-20 right-0" style="animation-delay:-4s"></div>
+  <div class="blob w-60 h-60 bg-primary/20 bottom-0 left-1/3" style="animation-delay:-8s"></div>
+
+  <!-- floating code snippets -->
+  <div class="hidden lg:block absolute top-32 left-6 float-slow opacity-80" style="animation-delay:-1s">
+    <div class="code-window bg-white/90 backdrop-blur border border-black/5 rounded-xl px-4 py-2.5 shadow-soft text-xs text-ink font-semibold flex items-center gap-2">
+      <span class="w-2 h-2 rounded-full bg-primary"></span> HTML5 Semantic Tags & Q&A
+    </div>
+  </div>
+  <div class="hidden lg:block absolute bottom-24 left-16 float-slow opacity-80" style="animation-delay:-3s">
+    <div class="code-window bg-white/90 backdrop-blur border border-black/5 rounded-xl px-4 py-2.5 shadow-soft text-xs text-ink font-semibold flex items-center gap-2">
+      <span class="w-2 h-2 rounded-full bg-sky-500"></span> CSS Flexbox vs Grid Explained
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 relative">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+      <!-- Left: copy -->
+      <div class="fade-up">
+        <div class="inline-flex items-center gap-2 bg-accent border border-secondary/50 text-[13px] font-semibold text-lime-700 px-4 py-1.5 rounded-full mb-7">
+          <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+          Free Educational Platform for NSDA Students
+        </div>
+
+        <h1 class="text-[2.75rem] sm:text-6xl lg:text-[3.5rem] font-extrabold leading-[1.08] tracking-tight text-ink">
+          Master HTML, CSS & <br/>
+          JavaScript <span class="hl">with Ease.
+            <svg viewBox="0 0 200 12" preserveAspectRatio="none"><path d="M2 9C40 3 160 3 198 9" stroke="#bef264" stroke-width="7" stroke-linecap="round" fill="none"/></svg>
+          </span>
+        </h1>
+
+        <p class="mt-7 text-lg text-muted leading-relaxed max-w-xl">
+          NSDAHR (NSDA Helpful Resources) provides organized Questions & Answers, exam prep materials, and core web concepts to help students excel in web development.
+        </p>
+
+        <div class="mt-10 flex flex-wrap items-center gap-4">
+          <a href="/docs/docs.html" class="btn-primary btn-ripple text-white font-semibold px-7 py-3.5 rounded-full inline-flex items-center gap-2">
+            Start Learning Now
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="https://github.com/alrifatsabbir/nsdahr.git" target="_blank" rel="noopener noreferrer" class="btn-ghost btn-ripple font-semibold px-7 py-3.5 rounded-full border-2 border-ink/10 inline-flex items-center gap-2 text-ink">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            GitHub Repository
+          </a>
+        </div>
+
+        <div class="mt-12 flex flex-wrap items-center gap-6 text-sm text-muted">
+          <div class="flex items-center gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4L19 6" stroke="#84cc16" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> 100% Free Resources</div>
+          <div class="flex items-center gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4L19 6" stroke="#84cc16" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Exam & Interview Ready</div>
+          <div class="flex items-center gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4L19 6" stroke="#84cc16" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Managed by alrifatsabbir</div>
+        </div>
+      </div>
+
+      <!-- Right: interactive resource preview mockup -->
+      <div class="fade-up stagger-2 relative">
+        <div class="relative rounded-2xl bg-white mockup-shadow border border-black/5 overflow-hidden float-slow">
+          <!-- browser chrome -->
+          <div class="flex items-center gap-2 px-4 py-3 bg-card border-b border-black/5">
+            <span class="w-3 h-3 rounded-full bg-[#ff5f57]"></span>
+            <span class="w-3 h-3 rounded-full bg-[#febc2e]"></span>
+            <span class="w-3 h-3 rounded-full bg-[#28c840]"></span>
+            <div class="ml-3 flex-1 bg-white rounded-full text-[11px] text-muted px-3 py-1 border border-black/5 flex items-center gap-1.5 font-mono">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none"><rect x="3" y="10" width="18" height="10" rx="2" stroke="#9ca3af" stroke-width="2"/><path d="M7 10V7a5 5 0 0110 0v3" stroke="#9ca3af" stroke-width="2"/></svg>
+              nsdahr.edu/javascript-questions
+            </div>
+          </div>
+
+          <!-- app body -->
+          <div class="flex text-[12.5px] h-[390px]">
+            <!-- sidebar -->
+            <div class="w-[160px] bg-card border-r border-black/5 p-3.5 hidden sm:block">
+              <div class="text-[10px] font-bold text-muted uppercase tracking-wider mb-2.5 px-1">Curriculum</div>
+              <div class="space-y-1">
+                <div class="bg-secondary/40 text-lime-900 font-semibold rounded-lg px-2.5 py-1.5 flex items-center justify-between">
+                  <span>HTML5 Basics</span>
+                  <span class="text-[9px] bg-primary/20 px-1.5 py-0.5 rounded">12</span>
+                </div>
+                <div class="text-ink/70 px-2.5 py-1.5 flex items-center justify-between hover:bg-black/5 rounded-lg">
+                  <span>CSS Layouts</span>
+                  <span class="text-[9px] bg-slate-200 px-1.5 py-0.5 rounded">18</span>
+                </div>
+                <div class="text-ink/70 px-2.5 py-1.5 flex items-center justify-between hover:bg-black/5 rounded-lg">
+                  <span>JS Concepts</span>
+                  <span class="text-[9px] bg-slate-200 px-1.5 py-0.5 rounded">24</span>
+                </div>
+                <div class="text-ink/70 px-2.5 py-1.5 flex items-center justify-between hover:bg-black/5 rounded-lg">
+                  <span>DOM & Events</span>
+                  <span class="text-[9px] bg-slate-200 px-1.5 py-0.5 rounded">15</span>
+                </div>
+              </div>
+              <div class="text-[10px] font-bold text-muted uppercase tracking-wider mt-4 mb-2 px-1">Prep Tests</div>
+              <div class="space-y-1">
+                <div class="text-ink/70 px-2.5 py-1.5 hover:bg-black/5 rounded-lg">NSDA Exam Q&A</div>
+                <div class="text-ink/70 px-2.5 py-1.5 hover:bg-black/5 rounded-lg">Mock Interviews</div>
+              </div>
+            </div>
+
+            <!-- content demo -->
+            <div class="flex-1 p-5 overflow-hidden flex flex-col justify-between">
+              <div>
+                <div class="flex items-center gap-2 bg-card border border-black/5 rounded-lg px-3 py-1.5 mb-4 text-muted">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="#9ca3af" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="#9ca3af" stroke-width="2" stroke-linecap="round"/></svg>
+                  Search questions, topics & terms…
+                </div>
+
+                <div class="inline-block text-[10px] font-bold uppercase tracking-wider text-lime-700 bg-accent px-2 py-0.5 rounded mb-2">JavaScript Q&A #04</div>
+                <div class="font-bold text-base text-ink mb-1.5">What is Event Delegation in JavaScript?</div>
+                <p class="text-[11.5px] text-muted mb-3 leading-relaxed">
+                  Event delegation is a technique of using event bubbling to handle events at a higher level in the DOM tree rather than on individual elements.
+                </p>
+
+                <div class="code-window bg-[#0f172a] rounded-lg p-3 text-[11px] leading-relaxed text-slate-200">
+                  <span class="tok-com">// Attach listener to parent container</span><br/>
+                  document.<span class="tok-tag">querySelector</span>(<span class="tok-val">'#parent'</span>).<span class="tok-tag">addEventListener</span>(<span class="tok-val">'click'</span>, (e) => {<br/>
+                  &nbsp;&nbsp;<span class="tok-kw">if</span> (e.target.matches(<span class="tok-val">'.btn'</span>)) handleBtn();<br/>
+                  });
+                </div>
+              </div>
+
+              <div class="pt-3 border-t border-black/5 flex items-center justify-between text-[11px]">
+                <span class="text-lime-700 font-semibold flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Recommended for Exam Prep</span>
+                <span class="text-muted font-medium">Topic 4 of 24</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- floating badge -->
+        <div class="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-lift border border-black/5 px-4 py-3 flex items-center gap-2.5 float-slow" style="animation-delay:-2s">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-primary to-secondary grid place-items-center text-white font-bold">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+          </div>
+          <div>
+            <div class="text-xs font-bold text-ink">Structured Study Tracks</div>
+            <div class="text-[10px] text-muted">HTML • CSS • JavaScript</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TOPICS OVERVIEW ================= -->
+<section id="topics" class="py-24 border-y border-black/5 bg-card/60">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-16 fade-up">
+      <div class="inline-block text-xs font-bold tracking-widest text-lime-700 uppercase bg-accent px-3 py-1 rounded-full mb-3">Core Pillars</div>
+      <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Structured Learning Tracks</h2>
+      <p class="mt-3 text-muted text-base">Designed specifically for NSDA students preparing for exams and technical assessments.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Track 1: HTML -->
+      <div class="feature-card fade-up bg-white border border-black/5 rounded-3xl p-8 shadow-softer relative overflow-hidden flex flex-col justify-between">
+        <div>
+          <div class="w-12 h-12 rounded-2xl bg-orange-500/10 text-orange-600 font-black text-xl grid place-items-center mb-6">
+            &lt;/&gt;
+          </div>
+          <h3 class="text-xl font-bold mb-2">HTML5 & Web Semantics</h3>
+          <p class="text-muted text-sm leading-relaxed mb-6">
+            Comprehensive Q&As covering semantic tags, document structure, forms, accessibility, meta tags, and web standards.
+          </p>
+          <ul class="space-y-2.5 text-xs text-slate-700 mb-8">
+            <li class="flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4L19 6" stroke="#84cc16" stroke-width="2.5"/></svg> Semantic Elements & Hierarchy</li>
+            <li class="flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4L19 6" stroke="#84cc16" stroke-width="2.5"/></svg> Form Validation & Inputs</li>
+            <li class="flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4L19 6" stroke="#84cc16" stroke-width="2.5"/></svg> Accessibility (a11y) Best Practices</li>
+          </ul>
+        </div>
+        <a href="/docs/docs.html#html-guide" class="inline-flex items-center gap-2 text-sm font-semibold text-orange-600 hover:text-orange-700 transition-colors">
+          Browse HTML Resources &rarr;
+        </a>
+      </div>
+
+      <!-- Track 2: CSS -->
+      <div class="feature-card fade-up stagger-1 bg-white border border-black/5 rounded-3xl p-8 shadow-softer relative overflow-hidden flex flex-col justify-between">
+        <div>
+          <div class="w-12 h-12 rounded-2xl bg-sky-500/10 text-sky-600 font-black text-xl grid place-items-center mb-6">
+            #
+          </div>
+          <h3 class="text-xl font-bold mb-2">CSS3 & Responsive Design</h3>
+          <p class="text-muted text-sm leading-relaxed mb-6">
+            Master Flexbox, CSS Grid, Box Model, positioning, specificity, transitions, media queries, and modern UI layouts.
+          </p>
+          <ul class="space-y-2.5 text-xs text-slate-700 mb-8">
+            <li class="flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4L19 6" stroke="#84cc16" stroke-width="2.5"/></svg> Flexbox vs CSS Grid Concepts</li>
+            <li class="flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4L19 6" stroke="#84cc16" stroke-width="2.5"/></svg> Responsive Layout Breakpoints</li>
+            <li class="flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4L19 6" stroke="#84cc16" stroke-width="2.5"/></svg> Specificity & Cascade Rules</li>
+          </ul>
+        </div>
+        <a href="/docs/docs.html#css-guide" class="inline-flex items-center gap-2 text-sm font-semibold text-sky-600 hover:text-sky-700 transition-colors">
+          Browse CSS Resources &rarr;
+        </a>
+      </div>
+
+      <!-- Track 3: JavaScript -->
+      <div class="feature-card fade-up stagger-2 bg-white border border-black/5 rounded-3xl p-8 shadow-softer relative overflow-hidden flex flex-col justify-between">
+        <div>
+          <div class="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-600 font-black text-xl grid place-items-center mb-6">
+            JS
+          </div>
+          <h3 class="text-xl font-bold mb-2">JavaScript & ES6+ Core</h3>
+          <p class="text-muted text-sm leading-relaxed mb-6">
+            Deep dive into DOM manipulation, event loops, closures, promises, async/await, scope, and key interview questions.
+          </p>
+          <ul class="space-y-2.5 text-xs text-slate-700 mb-8">
+            <li class="flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4L19 6" stroke="#84cc16" stroke-width="2.5"/></svg> DOM Selection & Manipulation</li>
+            <li class="flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4L19 6" stroke="#84cc16" stroke-width="2.5"/></svg> Asynchronous JS & Promises</li>
+            <li class="flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4L19 6" stroke="#84cc16" stroke-width="2.5"/></svg> ES6 Features & Array Methods</li>
+          </ul>
+        </div>
+        <a href="/docs/docs.html#javascript-guide" class="inline-flex items-center gap-2 text-sm font-semibold text-amber-600 hover:text-amber-700 transition-colors">
+          Browse JavaScript Resources &rarr;
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FEATURES ================= -->
+<section id="features" class="py-28 relative">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-16 fade-up">
+      <div class="inline-block text-xs font-bold tracking-widest text-lime-700 uppercase bg-accent px-3 py-1 rounded-full mb-4">Why NSDAHR</div>
+      <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight">Built for fast, structured learning</h2>
+      <p class="mt-4 text-muted text-lg">Designed to help students retain concepts, pass exams, and excel in technical interviews.</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="feature-card fade-up bg-card border border-black/5 rounded-3xl p-6">
+        <div class="icon-badge w-12 h-12 rounded-2xl grid place-items-center mb-5 text-white font-bold">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+        </div>
+        <h3 class="font-bold text-lg mb-2">Curated Q&A Library</h3>
+        <p class="text-muted text-sm leading-relaxed">Handpicked Questions & Answers specifically structured for NSDA course requirements.</p>
+      </div>
+
+      <div class="feature-card fade-up stagger-1 bg-card border border-black/5 rounded-3xl p-6">
+        <div class="icon-badge w-12 h-12 rounded-2xl grid place-items-center mb-5 text-white font-bold">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+        </div>
+        <h3 class="font-bold text-lg mb-2">Instant Topic Search</h3>
+        <p class="text-muted text-sm leading-relaxed">Find specific questions, tags, or concepts in milliseconds with live client-side filtering.</p>
+      </div>
+
+      <div class="feature-card fade-up stagger-2 bg-card border border-black/5 rounded-3xl p-6">
+        <div class="icon-badge w-12 h-12 rounded-2xl grid place-items-center mb-5 text-white font-bold">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <h3 class="font-bold text-lg mb-2">Exam Preparation</h3>
+        <p class="text-muted text-sm leading-relaxed">Prepare for theoretical and practical tests with clear explanations and example code snippets.</p>
+      </div>
+
+      <div class="feature-card fade-up stagger-3 bg-card border border-black/5 rounded-3xl p-6">
+        <div class="icon-badge w-12 h-12 rounded-2xl grid place-items-center mb-5 text-white font-bold">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+        </div>
+        <h3 class="font-bold text-lg mb-2">Code Highlights</h3>
+        <p class="text-muted text-sm leading-relaxed">Syntax-highlighted code snippets that make understanding complex logic effortless.</p>
+      </div>
+
+      <div class="feature-card fade-up bg-card border border-black/5 rounded-3xl p-6">
+        <div class="icon-badge w-12 h-12 rounded-2xl grid place-items-center mb-5 text-white font-bold">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+        </div>
+        <h3 class="font-bold text-lg mb-2">Mobile & Tablet Friendly</h3>
+        <p class="text-muted text-sm leading-relaxed">Study anywhere — our responsive layout scales seamlessly to phones and tablets.</p>
+      </div>
+
+      <div class="feature-card fade-up stagger-1 bg-card border border-black/5 rounded-3xl p-6">
+        <div class="icon-badge w-12 h-12 rounded-2xl grid place-items-center mb-5 text-white font-bold">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        </div>
+        <h3 class="font-bold text-lg mb-2">Blazing Fast Speed</h3>
+        <p class="text-muted text-sm leading-relaxed">Zero heavy frameworks or slow loading scripts. Pages load instantaneously.</p>
+      </div>
+
+      <div class="feature-card fade-up stagger-2 bg-card border border-black/5 rounded-3xl p-6">
+        <div class="icon-badge w-12 h-12 rounded-2xl grid place-items-center mb-5 text-white font-bold">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h7"/></svg>
+        </div>
+        <h3 class="font-bold text-lg mb-2">Auto Table of Contents</h3>
+        <p class="text-muted text-sm leading-relaxed">Quickly jump to specific sub-questions with automatic heading navigation on every page.</p>
+      </div>
+
+      <div class="feature-card fade-up stagger-3 bg-card border border-black/5 rounded-3xl p-6">
+        <div class="icon-badge w-12 h-12 rounded-2xl grid place-items-center mb-5 text-white font-bold">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+        </div>
+        <h3 class="font-bold text-lg mb-2">100% Free & Open Source</h3>
+        <p class="text-muted text-sm leading-relaxed">Always free for NSDA students and self-learners, with open code on GitHub.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Q&A SAMPLE PREVIEW ================= -->
+<section id="qa-preview" class="py-28 bg-card/50 border-y border-black/5">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-16 fade-up">
+      <div class="inline-block text-xs font-bold tracking-widest text-lime-700 uppercase bg-accent px-3 py-1 rounded-full mb-4">Sample Questions</div>
+      <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight">Real Exam & Interview Questions</h2>
+      <p class="mt-4 text-muted text-lg">Here is a glimpse of how NSDAHR breaks down technical concepts clearly.</p>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-8 items-stretch">
+      <!-- Question Card 1 -->
+      <div class="fade-up bg-white rounded-3xl p-8 shadow-soft border border-black/5 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-xs font-bold text-sky-600 uppercase tracking-wider bg-sky-50 px-3 py-1 rounded-full">CSS Concept</span>
+            <span class="text-xs text-muted">Frequently Asked</span>
+          </div>
+          <h3 class="text-xl font-bold text-ink mb-3">What is the difference between Flexbox and CSS Grid?</h3>
+          <p class="text-muted text-sm leading-relaxed mb-4">
+            <strong>Flexbox</strong> is designed for 1-dimensional layouts (either a row OR a column), whereas <strong>CSS Grid</strong> is built for 2-dimensional layouts (rows AND columns simultaneously).
+          </p>
+          <div class="code-window bg-[#0f172a] text-slate-200 rounded-2xl p-4 text-[12px] leading-relaxed mb-4">
+            <span class="tok-com">/* Flexbox: One axis direction */</span><br/>
+            .<span class="tok-tag">flex-container</span> { display: flex; flex-direction: row; }<br/><br/>
+            <span class="tok-com">/* CSS Grid: Two dimensional grid lines */</span><br/>
+            .<span class="tok-tag">grid-container</span> { display: grid; grid-template-columns: 1fr 2fr; }
+          </div>
+        </div>
+        <a href="/docs/docs.html#css-guide" class="text-xs font-bold text-lime-700 hover:text-lime-800 inline-flex items-center gap-1">
+          Read full explanation in CSS Hub &rarr;
+        </a>
+      </div>
+
+      <!-- Question Card 2 -->
+      <div class="fade-up stagger-2 bg-white rounded-3xl p-8 shadow-soft border border-black/5 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-xs font-bold text-amber-600 uppercase tracking-wider bg-amber-50 px-3 py-1 rounded-full">JS Concept</span>
+            <span class="text-xs text-muted">Core Question</span>
+          </div>
+          <h3 class="text-xl font-bold text-ink mb-3">Explain the difference between `var`, `let`, and `const`.</h3>
+          <p class="text-muted text-sm leading-relaxed mb-4">
+            <code class="text-amber-800 bg-accent px-1.5 py-0.5 rounded">var</code> is function-scoped and hoisted, whereas <code class="text-amber-800 bg-accent px-1.5 py-0.5 rounded">let</code> and <code class="text-amber-800 bg-accent px-1.5 py-0.5 rounded">const</code> are block-scoped. <code class="text-amber-800 bg-accent px-1.5 py-0.5 rounded">const</code> prevents re-assignment.
+          </p>
+          <div class="code-window bg-[#0f172a] text-slate-200 rounded-2xl p-4 text-[12px] leading-relaxed mb-4">
+            <span class="tok-kw">var</span> x = 10; <span class="tok-com">// Function/global scope</span><br/>
+            <span class="tok-kw">let</span> y = 20; <span class="tok-com">// Block scope (can re-assign)</span><br/>
+            <span class="tok-kw">const</span> z = 30; <span class="tok-com">// Block scope (cannot re-assign)</span>
+          </div>
+        </div>
+        <a href="/docs/docs.html#javascript-guide" class="text-xs font-bold text-lime-700 hover:text-lime-800 inline-flex items-center gap-1">
+          Read full explanation in JS Hub &rarr;
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HOW IT WORKS ================= -->
+<section class="py-28">
+  <div class="max-w-4xl mx-auto px-6 lg:px-8">
+    <div class="text-center mb-20 fade-up">
+      <div class="inline-block text-xs font-bold tracking-widest text-lime-700 uppercase bg-accent px-3 py-1 rounded-full mb-4">Learning Methodology</div>
+      <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight">3 Simple Steps to Pass Your Exams</h2>
+    </div>
+
+    <div class="relative">
+      <div class="timeline-line absolute left-6 sm:left-1/2 top-0 bottom-0 w-0.5 sm:-translate-x-1/2"></div>
+
+      <div class="space-y-16">
+        <!-- step 1 -->
+        <div class="relative flex items-start sm:items-center gap-6 sm:gap-0 fade-up">
+          <div class="timeline-dot z-10 w-12 h-12 rounded-full bg-primary text-white font-extrabold grid place-items-center shrink-0 sm:absolute sm:left-1/2 sm:-translate-x-1/2">1</div>
+          <div class="sm:w-1/2 sm:pr-14">
+            <div class="bg-card border border-black/5 rounded-2xl p-6 shadow-softer">
+              <h3 class="font-bold text-lg mb-1.5">Select Your Subject</h3>
+              <p class="text-muted text-sm">Choose from structured modules covering HTML5, CSS3, or JavaScript fundamentals.</p>
+            </div>
+          </div>
+        </div>
+        <!-- step 2 -->
+        <div class="relative flex items-start sm:items-center gap-6 sm:gap-0 fade-up stagger-1">
+          <div class="timeline-dot z-10 w-12 h-12 rounded-full bg-primary text-white font-extrabold grid place-items-center shrink-0 sm:absolute sm:left-1/2 sm:-translate-x-1/2">2</div>
+          <div class="sm:w-1/2 sm:ml-auto sm:pl-14">
+            <div class="bg-card border border-black/5 rounded-2xl p-6 shadow-softer">
+              <h3 class="font-bold text-lg mb-1.5">Study Questions & Answers</h3>
+              <p class="text-muted text-sm">Review organized Q&As complete with code snippets, explanations, and key takeaways.</p>
+            </div>
+          </div>
+        </div>
+        <!-- step 3 -->
+        <div class="relative flex items-start sm:items-center gap-6 sm:gap-0 fade-up stagger-2">
+          <div class="timeline-dot z-10 w-12 h-12 rounded-full bg-primary text-white font-extrabold grid place-items-center shrink-0 sm:absolute sm:left-1/2 sm:-translate-x-1/2">3</div>
+          <div class="sm:w-1/2 sm:pr-14">
+            <div class="bg-card border border-black/5 rounded-2xl p-6 shadow-softer">
+              <h3 class="font-bold text-lg mb-1.5">Test & Ace Your Evaluation</h3>
+              <p class="text-muted text-sm">Use search and quick navigation to revise efficiently right before exams or interviews.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STATISTICS ================= -->
+<section class="py-24 bg-gradient-to-br from-primary to-lime-600 relative overflow-hidden text-white">
+  <div class="absolute inset-0 hero-grid opacity-20"></div>
+  <div class="max-w-6xl mx-auto px-6 lg:px-8 relative">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+      <div class="fade-up">
+        <div class="counter text-5xl font-extrabold" data-target="150" data-suffix="+">0</div>
+        <p class="mt-2 text-white/90 font-medium text-sm">Organized Q&A Resources</p>
+      </div>
+      <div class="fade-up stagger-1">
+        <div class="counter text-5xl font-extrabold" data-target="3" data-suffix=" Core">0</div>
+        <p class="mt-2 text-white/90 font-medium text-sm">Web Technologies (HTML/CSS/JS)</p>
+      </div>
+      <div class="fade-up stagger-2">
+        <div class="counter text-5xl font-extrabold" data-target="100" data-suffix="%">0</div>
+        <p class="mt-2 text-white/90 font-medium text-sm">Free for NSDA Students</p>
+      </div>
+      <div class="fade-up stagger-3">
+        <div class="counter text-5xl font-extrabold" data-target="100" data-suffix="%">0</div>
+        <p class="mt-2 text-white/90 font-medium text-sm">Mobile & Desktop Responsive</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section id="faq" class="py-28 bg-card/50 border-y border-black/5">
+  <div class="max-w-3xl mx-auto px-6 lg:px-8">
+    <div class="text-center mb-16 fade-up">
+      <div class="inline-block text-xs font-bold tracking-widest text-lime-700 uppercase bg-accent px-3 py-1 rounded-full mb-4">FAQ</div>
+      <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight">Frequently Asked Questions</h2>
+    </div>
+
+    <div class="space-y-4" id="accordion">
+      <div class="accordion-item fade-up bg-white border border-black/5 rounded-2xl overflow-hidden">
+        <button class="accordion-trigger w-full flex items-center justify-between text-left px-6 py-5 font-semibold text-ink">
+          What is NSDAHR?
+          <span class="accordion-icon shrink-0 w-6 h-6 rounded-full bg-accent grid place-items-center text-lime-700">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+          </span>
+        </button>
+        <div class="accordion-content px-6 text-muted text-sm leading-relaxed">
+          <p class="pb-5">NSDAHR stands for "NSDA Helpful Resources", maintained by alrifatsabbir. It is a free educational platform designed to provide NSDA students with structured HTML, CSS, and JavaScript study materials, Questions & Answers, and exam prep resources.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item fade-up bg-white border border-black/5 rounded-2xl overflow-hidden">
+        <button class="accordion-trigger w-full flex items-center justify-between text-left px-6 py-5 font-semibold text-ink">
+          Who can use NSDAHR resources?
+          <span class="accordion-icon shrink-0 w-6 h-6 rounded-full bg-accent grid place-items-center text-lime-700">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+          </span>
+        </button>
+        <div class="accordion-content px-6 text-muted text-sm leading-relaxed">
+          <p class="pb-5">Anyone! While created primarily for NSDA students, all web development learners preparing for frontend interviews, school exams, or certifications can freely access all resources.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item fade-up bg-white border border-black/5 rounded-2xl overflow-hidden">
+        <button class="accordion-trigger w-full flex items-center justify-between text-left px-6 py-5 font-semibold text-ink">
+          What topics are covered in the resources?
+          <span class="accordion-icon shrink-0 w-6 h-6 rounded-full bg-accent grid place-items-center text-lime-700">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+          </span>
+        </button>
+        <div class="accordion-content px-6 text-muted text-sm leading-relaxed">
+          <p class="pb-5">We cover fundamental and advanced concepts across HTML5 (semantic tags, forms, accessibility), CSS3 (Flexbox, Grid, animations, responsiveness), and JavaScript (DOM manipulation, ES6+, async programming, event loops).</p>
+        </div>
+      </div>
+
+      <div class="accordion-item fade-up bg-white border border-black/5 rounded-2xl overflow-hidden">
+        <button class="accordion-trigger w-full flex items-center justify-between text-left px-6 py-5 font-semibold text-ink">
+          Do I need to sign up or create an account?
+          <span class="accordion-icon shrink-0 w-6 h-6 rounded-full bg-accent grid place-items-center text-lime-700">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+          </span>
+        </button>
+        <div class="accordion-content px-6 text-muted text-sm leading-relaxed">
+          <p class="pb-5">No account or login is required. You can jump directly into learning and studying all Questions & Answers instantly.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section id="cta" class="py-28">
+  <div class="max-w-5xl mx-auto px-6 lg:px-8">
+    <div class="glow-surface fade-up relative rounded-4xl bg-gradient-to-br from-primary to-lime-600 px-10 py-20 text-center overflow-hidden">
+      <div class="mouse-glow"></div>
+      <div class="absolute inset-0 hero-grid opacity-20"></div>
+      <div class="relative">
+        <h2 class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight max-w-2xl mx-auto">Ready to Excel in Web Development?</h2>
+        <p class="mt-5 text-white/90 text-lg max-w-xl mx-auto">Access organized HTML, CSS, and JavaScript study guides and practice Q&As now.</p>
+        <div class="mt-9 flex flex-wrap justify-center items-center gap-4">
+          <a href="/docs/docs.html" class="btn-ripple inline-flex items-center gap-2 bg-white text-lime-700 font-bold px-8 py-4 rounded-full shadow-lift hover:-translate-y-0.5 transition-transform">
+            Explore Learning Hub
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="#65a30d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="https://github.com/alrifatsabbir/nsdahr.git" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-slate-900 text-white font-bold px-7 py-4 rounded-full hover:bg-slate-800 transition-colors">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            Star Repository
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="border-t border-black/5 py-14">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+      <div class="flex items-center gap-2.5">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-primary to-secondary grid place-items-center text-white font-black text-sm">
+          N
+        </div>
+        <div>
+          <div class="font-extrabold">NSDAHR</div>
+          <div class="text-xs text-muted">NSDA Helpful Resources — Managed by <a href="https://github.com/alrifatsabbir" target="_blank" rel="noopener noreferrer" class="font-semibold text-ink underline">alrifatsabbir</a></div>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-x-8 gap-y-3 text-sm font-medium text-ink/70">
+        <a href="/docs/docs.html#html-guide" class="hover:text-primary transition-colors">HTML Q&A</a>
+        <a href="/docs/docs.html#css-guide" class="hover:text-primary transition-colors">CSS Q&A</a>
+        <a href="/docs/docs.html#javascript-guide" class="hover:text-primary transition-colors">JavaScript Q&A</a>
+        <a href="https://github.com/alrifatsabbir/nsdahr.git" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">GitHub Repository</a>
+      </div>
+    </div>
+
+    <div class="mt-10 pt-8 border-t border-black/5 text-xs text-muted text-center md:text-left flex flex-col md:flex-row justify-between gap-4">
+      <div>© 2026 NSDAHR — Educational Platform for NSDA Students.</div>
+      <div>Maintained & Managed by <a href="https://github.com/alrifatsabbir" target="_blank" rel="noopener noreferrer" class="font-semibold text-ink hover:text-lime-700">alrifatsabbir</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- back to top -->
+<button id="backToTop" aria-label="Back to top" class="fixed bottom-7 right-7 z-50 w-11 h-11 rounded-full bg-ink text-white grid place-items-center shadow-lift hover:bg-ink/90 transition-colors">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M12 5L6 11M12 5L18 11" stroke="white" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<script src="script.js"></script>
+
+</body>
+</html>
