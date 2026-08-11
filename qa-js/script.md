@@ -310,9 +310,11 @@
  }
  ```
 
- <h3>35. Write a function to check if a string is a palindrome (reads the same forward and backward).</h3> ```javascript
-
-
+ <h3>35. Write a function to check if a string is a palindrome (reads the same forward and backward).</h3> 
+ 
+ 
+ ```javascript
+ 
  function isPalindrome(str) {
      let reversed = str.split('').reverse().join('');
      return str === reversed;
