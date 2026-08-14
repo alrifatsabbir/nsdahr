@@ -105,31 +105,37 @@ function renderMarkdown(md) {
 }
 
 // Fallback config if docs.json cannot be fetched
-const DEFAULT_NAV = [
+const DEFAULT_NAV = 
+[
   {
-    section: "Getting Started",
-    pages: [
-      { slug: "introduction", title: "Introduction", file: "../intro/intro.md" },
-      { slug: "installation", title: "Installation & Setup", file: "../intro/install.md" }
+    "section": "Getting Started",
+    "pages": [
+      { "slug": "introduction", "title": "Introduction", "file": "../intro/intro.md" },
+      { "slug": "installation", "title": "Installation & Setup", "file": "../intro/install.md" }
     ]
   },
   {
-    section: "Questions & Answers",
-    pages: [
-      { slug: "html-guide", title: "HTML5 Q&A Guide", file: "../qa-html/html-question.md" },
-      { slug: "css-guide", title: "CSS3 Q&A Guide", file: "../qa-css/css-question.md" },
-      { slug: "javascript-guide", title: "JavaScript Q&A Guide", file: "../qa-js/js-question.md" }
+    "section": "Questions & Answers",
+    "pages": [
+      { "slug": "html-guide", "title": "HTML5 Q&A Guide", "file": "../qa-html/html-question.md" },
+      { "slug": "css-guide", "title": "CSS3 Q&A Guide", "file": "../qa-css/css-question.md" },
+      { "slug": "javascript-guide", "title": "JavaScript Q&A Guide", "file": "../qa-js/js-question.md" },
+      { "slug": "bootstrap-guide", "title": "Bootstrap Q&A Guide", "file": "../qa-bootstrap/bootstrap-question.md" },
+      { "slug": "tailwindcss-guide", "title": "Tailwind CSS Q&A Guide", "file": "../qa-tailwindcss/tailwindcss-question.md" }
     ]
   },
   {
-    section: "Practice & Exam Prep",
-    pages: [
-      { slug: "html-qanda", title: "HTML Practice Set", file: "../qa-html/index.md" },
-      { slug: "css-qanda", title: "CSS Styling Practice", file: "../qa-css/style.md" },
-      { slug: "js-qanda", title: "JS Scripting Practice", file: "../qa-js/script.md" }
+    "section": "Practice & Exam Prep",
+    "pages": [
+      { "slug": "html-qanda", "title": "HTML Practice Set", "file": "../qa-html/index.md" },
+      { "slug": "css-qanda", "title": "CSS Styling Practice", "file": "../qa-css/style.md" },
+      { "slug": "js-qanda", "title": "JS Scripting Practice", "file": "../qa-js/script.md" },
+      { "slug": "bootstrap-qanda", "title": "Bootstrap Practice", "file": "../qa-bootstrap/bootstrap.md" },
+      { "slug": "tailwindcss-qanda", "title": "Tailwind CSS Practice", "file": "../qa-tailwindcss/tailwindcss.md" }
     ]
   }
 ];
+
 
 let NAV = DEFAULT_NAV;
 let FLAT_PAGES = NAV.flatMap(s => s.pages);
