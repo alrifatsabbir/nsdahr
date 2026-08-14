@@ -104,7 +104,6 @@ function renderMarkdown(md) {
   return fallbackMarkdownToHtml(md);
 }
 
-// Fallback config if docs.json cannot be fetched
 const DEFAULT_NAV = 
 [
   {
@@ -135,7 +134,6 @@ const DEFAULT_NAV =
     ]
   }
 ];
-
 
 let NAV = DEFAULT_NAV;
 let FLAT_PAGES = NAV.flatMap(s => s.pages);
@@ -239,7 +237,7 @@ async function renderPage(slug) {
     <span class="text-ink font-semibold">${page.title}</span>
   `;
 
-  const headings = contentEl.querySelectorAll('h2, h3');
+  const headings = contentEl.querySelectorAll('h1, h2');
   tocEl.innerHTML = '';
   headings.forEach(h => {
     const id = slugify(h.textContent);
@@ -247,7 +245,7 @@ async function renderPage(slug) {
     const a = document.createElement('a');
     a.href = '#' + slug + '--' + id;
     a.textContent = h.textContent;
-    a.className = 'toc-link block' + (h.tagName === 'H3' ? ' toc-h3' : '');
+    a.className = 'toc-link block' + (h.tagName === 'H2' ? ' toc-h2' : '');
     a.addEventListener('click', (e) => {
       e.preventDefault();
       h.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -303,7 +301,6 @@ function currentSlugFromHash() {
 
 window.addEventListener('hashchange', () => renderPage(currentSlugFromHash()));
 
-// Init
 (async () => {
   await loadNavConfig();
   renderPage(currentSlugFromHash());
