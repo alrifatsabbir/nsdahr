@@ -718,8 +718,8 @@ Once installed, open your IDE or terminal and run:
 
 ### **You will find these programs in `script.js` in this directory.**
 
-> [script.js](script.js)  
-> [script.md](script.md)
+> [script.js](https://github.com/alrifatsabbir/nsdahr/blob/main/qa-js/script.js)  
+> [script.md](https://github.com/alrifatsabbir/nsdahr/blob/main/qa-js/script.md)
 
 Explanation aren't available yet. But soon will be available.
 

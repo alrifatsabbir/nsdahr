@@ -743,7 +743,7 @@ Then add Tailwind directives to your CSS:
 
 ### **You will find these programs in `tailwindcss.md` in this directory.**
 
-> [tailwindcss.md](tailwindcss.md)
+> [tailwindcss.md](https://github.com/alrifatsabbir/nsdahr/blob/main/qa-tailwindcss/tailwindcss.md)
 
 Explanation aren't available yet. But soon will be available.
 

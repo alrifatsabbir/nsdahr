@@ -739,7 +739,7 @@ npm install bootstrap
 
 ### **You will find these programs in `bootsrap.md` in this directory.**
 
-> [bootsrap.md](bootsrap.md)
+> [bootsrap.md](https://github.com/alrifatsabbir/nsdahr/blob/main/qa-bootstrap/bootstrap.md)
 
 Explanation aren't available yet. But soon will be available.
 

@@ -32,6 +32,30 @@
 </script>
 
 <link rel="stylesheet" href="docs.css" />
+<style>
+  .code-wrapper {
+    position: relative;
+    width: 100%;
+  }
+  .copy-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: #334155;
+    color: #ffffff;
+    border: none;
+    padding: 4px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    font-family: sans-serif;
+    transition: background-color 0.2s ease;
+    z-index: 20;
+  }
+  .copy-btn:hover {
+    background-color: #475569;
+  }
+</style>
 </head>
 
 <body class="antialiased">
@@ -101,6 +125,51 @@
 </div>
 
 <script src="docs.js"></script>
+
+<script>
+  function addCopyButtons() {
+    const codeBlocks = document.querySelectorAll('article#content pre');
+    codeBlocks.forEach(pre => {
+      if (pre.dataset.hasCopyButton) return;
+      pre.dataset.hasCopyButton = "true";
+
+      const wrapper = document.createElement('div');
+      wrapper.className = 'code-wrapper';
+
+      pre.parentNode.insertBefore(wrapper, pre);
+      wrapper.appendChild(pre);
+
+      const button = document.createElement('button');
+      button.className = 'copy-btn';
+      button.innerText = 'Copy';
+
+      button.addEventListener('click', () => {
+        const codeText = pre.querySelector('code') ? pre.querySelector('code').innerText : pre.innerText;
+        navigator.clipboard.writeText(codeText).then(() => {
+          button.innerText = 'Copied!';
+          setTimeout(() => {
+            button.innerText = 'Copy';
+          }, 2000);
+        }).catch(err => {
+          console.error('Failed to copy code: ', err);
+        });
+      });
+
+      wrapper.appendChild(button);
+    });
+  }
+
+  const observer = new MutationObserver(() => {
+    addCopyButtons();
+  });
+
+  const contentTarget = document.getElementById('content');
+  if (contentTarget) {
+    observer.observe(contentTarget, { childList: true, subtree: true });
+  }
+
+  window.addEventListener('DOMContentLoaded', addCopyButtons);
+</script>
 
 </body>
 </html>

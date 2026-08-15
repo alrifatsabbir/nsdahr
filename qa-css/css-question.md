@@ -588,6 +588,11 @@ _This is the recommended method as it separates design from content and keeps CS
 93. Use `calc()` to create a sidebar that is always 300px narrower than the container.
 94. Build an aspect-ratio box using `aspect-ratio: 16 / 9` for responsive video embeds.
 95. Create a grid with `auto-fit` columns using `minmax()` and `clamp()` for fully fluid layout.
+96. Create a responsive container using clamp() that dynamically adjusts its horizontal padding based on the viewport width.
+97. Build a reusable card component using CSS custom properties to control its padding, border radius, shadow, and background color.
+98. Create a responsive font-size system using clamp() for headings, paragraphs, and buttons.
+99. Use calc() with CSS custom properties to dynamically calculate the height of a content section based on the viewport height and header height.
+100. Build a fully responsive layout using CSS custom properties, clamp(), min(), max(), and calc() without using media queries.
 
 ---
 
@@ -731,8 +736,8 @@ _This is the recommended method as it separates design from content and keeps CS
 
 ### **You will find these programs in `style.css` in this directory.**
 
-> [style.css](style.css)  
-> [style.md](style.md)
+> [style.css](https://github.com/alrifatsabbir/nsdahr/blob/main/qa-css/style.css)  
+> [style.md](https://github.com/alrifatsabbir/nsdahr/blob/main/qa-css/style.md)
 
 Explanation aren't available yet. But soon will be available.
 
