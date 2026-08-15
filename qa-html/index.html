@@ -1,354 +1,1750 @@
-<!-- Basic HTML Structure -->
-
-<!-- 1. Create a basic HTML5 document. -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Title</title>
+    <title>HTML Practice Questions and Answers</title>
 </head>
 <body>
 
+    <h1>HTML Practice Questions and Answers (All 200 Items)</h1>
+
+    <!-- 🟢 Level 1: Beginner (1 - 50) -->
+    <h2>🟢 Level 1: Beginner (1 - 50)</h2>
+
+    <h3>1. Basic HTML Structure</h3>
+
+    <h4>1. Create a basic HTML5 document.</h4>
+    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;My Webpage&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+    <h4>2. Add a title to your webpage.</h4>
+    <title>My First HTML Page</title>
+
+    <h4>3. Create a webpage with a heading and a paragraph.</h4>
+    <h1>Welcome</h1>
+    <p>This is my first webpage.</p>
+
+    <h4>4. Add a favicon to a webpage.</h4>
+    <link rel="icon" href="favicon.ico">
+
+    <h4>5. Set the language of the webpage to English.</h4>
+    <p>Set <code>&lt;html lang="en"&gt;</code> in the root element.</p>
+
+    <h3>2. Headings &amp; Text</h3>
+
+    <h4>6. Create all six heading tags (h1 to h6).</h4>
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+
+    <h4>7. Create a paragraph containing at least three sentences.</h4>
+    <p>
+    HTML is the foundation of web development.
+    It is easy to learn.
+    It works together with CSS and JavaScript.
+    </p>
+
+    <h4>8. Make a word bold using HTML.</h4>
+    <p>This is <strong>important</strong>.</p>
+
+    <h4>9. Make a word italic using HTML.</h4>
+    <p>This is <em>italic</em> text.</p>
+
+    <h4>10. Insert a horizontal line between two paragraphs.</h4>
+    <p>First paragraph.</p>
+    <hr>
+    <p>Second paragraph.</p>
+
+    <h3>3. Links &amp; Images</h3>
+
+    <h4>11. Create a hyperlink to Google.</h4>
+    <a href="https://www.google.com">Google</a>
+
+    <h4>12. Open a hyperlink in a new tab.</h4>
+    <a href="https://www.google.com" target="_blank">Google</a>
+
+    <h4>13. Display an image on the webpage.</h4>
+    <img src="image.jpg" alt="Sample Image">
+
+    <h4>14. Add alternative text to an image.</h4>
+    <img src="cat.jpg" alt="A cute cat">
+
+    <h4>15. Create an image that acts as a hyperlink.</h4>
+    <a href="https://example.com">
+        <img src="logo.png" alt="Logo">
+    </a>
+
+    <h3>4. Lists</h3>
+
+    <h4>16. Create an unordered list of five fruits.</h4>
+    <ul>
+        <li>Apple</li>
+        <li>Mango</li>
+        <li>Banana</li>
+        <li>Orange</li>
+        <li>Grapes</li>
+    </ul>
+
+    <h4>17. Create an ordered list of five programming languages.</h4>
+    <ol>
+        <li>C</li>
+        <li>C++</li>
+        <li>Java</li>
+        <li>Python</li>
+        <li>JavaScript</li>
+    </ol>
+
+    <h4>18. Create a nested list.</h4>
+    <ul>
+        <li>Frontend
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h4>19. Create a description list.</h4>
+    <dl>
+        <dt>HTML</dt>
+        <dd>Markup Language</dd>
+
+        <dt>CSS</dt>
+        <dd>Stylesheet Language</dd>
+    </dl>
+
+    <h4>20. Add list items using the correct HTML tag.</h4>
+    <ul>
+        <li>Item One</li>
+        <li>Item Two</li>
+        <li>Item Three</li>
+    </ul>
+
+    <h3>5. Tables</h3>
+
+    <h4>21. Create a table with three columns.</h4>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+        </tr>
+    </table>
+
+    <h4>22. Add a table header.</h4>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+        </tr>
+    </table>
+
+    <h4>23. Add three rows of data.</h4>
+    <table border="1">
+        <tr>
+            <td>John</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>Jane</td>
+            <td>22</td>
+        </tr>
+        <tr>
+            <td>Alex</td>
+            <td>25</td>
+        </tr>
+    </table>
+
+    <h4>24. Merge two columns using colspan.</h4>
+    <table border="1">
+        <tr>
+            <td colspan="2">Merged Columns</td>
+        </tr>
+    </table>
+
+    <h4>25. Merge two rows using rowspan.</h4>
+    <table border="1">
+        <tr>
+            <td rowspan="2">Merged Rows</td>
+            <td>Row 1</td>
+        </tr>
+        <tr>
+            <td>Row 2</td>
+        </tr>
+    </table>
+
+    <h3>6. Forms</h3>
+
+    <h4>26. Create a simple form.</h4>
+    <form></form>
+
+    <h4>27. Add a text input field.</h4>
+    <form>
+        <input type="text" placeholder="Enter your name">
+    </form>
+
+    <h4>28. Add an email input field.</h4>
+    <form>
+        <input type="email" placeholder="Enter your email">
+    </form>
+
+    <h4>29. Add a password input field.</h4>
+    <form>
+        <input type="password" placeholder="Enter your password">
+    </form>
+
+    <h4>30. Add a submit button.</h4>
+    <form>
+        <input type="submit" value="Submit">
+    </form>
+
+    <h3>7. Semantic HTML</h3>
+
+    <h4>31. Create a header section.</h4>
+    <header>
+        <h1>My Website</h1>
+    </header>
+
+    <h4>32. Create a navigation bar.</h4>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <h4>33. Create a main content section.</h4>
+    <main>
+        <h2>Main Content</h2>
+        <p>This is the main content of the webpage.</p>
+    </main>
+
+    <h4>34. Create an article with a section.</h4>
+    <article>
+        <h2>Article Title</h2>
+        <section>
+            <h3>Section Title</h3>
+            <p>This is the section content.</p>
+        </section>
+    </article>
+
+    <h4>35. Create a footer.</h4>
+    <footer>
+        <p>&copy; 2026 My Website. All Rights Reserved.</p>
+    </footer>
+
+    <h3>8. Multimedia</h3>
+
+    <h4>36. Add an audio file.</h4>
+    <audio controls>
+        <source src="audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <h4>37. Add a video file.</h4>
+    <video controls width="500">
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <h4>38. Embed a YouTube video.</h4>
+    <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/VIDEO_ID"
+        title="YouTube Video"
+        allowfullscreen>
+    </iframe>
+
+    <h4>39. Add controls to a video.</h4>
+    <video controls>
+        <source src="movie.mp4" type="video/mp4">
+    </video>
+
+    <h4>40. Display an iframe.</h4>
+    <iframe
+        src="https://example.com"
+        width="600"
+        height="400">
+    </iframe>
+
+    <h3>9. HTML Entities &amp; Attributes</h3>
+
+    <h4>41. Display the copyright symbol.</h4>
+    <p>&copy; 2026</p>
+
+    <h4>42. Display the less-than symbol.</h4>
+    <p>&lt;</p>
+
+    <h4>43. Add a tooltip using the title attribute.</h4>
+    <p title="This is a tooltip">Hover over me.</p>
+
+    <h4>44. Make an input field required.</h4>
+    <input type="text" required>
+
+    <h4>45. Disable a button.</h4>
+    <button disabled>Submit</button>
+
+    <h3>10. Miscellaneous</h3>
+
+    <h4>46. Create a button.</h4>
+    <button>Click Me</button>
+
+    <h4>47. Create a comment in HTML.</h4>
+    <!-- This is an HTML comment -->
+
+    <h4>48. Create a progress bar.</h4>
+    <progress value="60" max="100"></progress>
+
+    <h4>49. Create a meter element.</h4>
+    <meter value="75" min="0" max="100"></meter>
+
+    <h4>50. Display the current date using the time element.</h4>
+    <time datetime="2026-08-04">August 4, 2026</time>
+
+    <hr>
+
+    <!-- 🟡 Level 2: Medium (51 - 100) -->
+    <h2>🟡 Level 2: Medium (51 - 100)</h2>
+
+    <h3>11. Advanced Forms &amp; Validation</h3>
+
+    <h4>51. Create a form with name, email, and message fields.</h4>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        
+        <button type="submit">Send</button>
+    </form>
+
+    <h4>52. Add a dropdown select with multiple options.</h4>
+    <select name="country" id="country">
+        <option value="">Select a country</option>
+        <option value="us">United States</option>
+        <option value="uk">United Kingdom</option>
+        <option value="ca">Canada</option>
+        <option value="au">Australia</option>
+    </select>
+
+    <h4>53. Create a textarea for multi-line input.</h4>
+    <textarea name="bio" id="bio" rows="5" cols="30" placeholder="Tell us about yourself"></textarea>
+
+    <h4>54. Add a checkbox for terms and conditions.</h4>
+    <label>
+        <input type="checkbox" name="terms" required>
+        I agree to the Terms and Conditions
+    </label>
+
+    <h4>55. Create radio buttons for gender selection.</h4>
+    <fieldset>
+        <legend>Gender:</legend>
+        <label><input type="radio" name="gender" value="male"> Male</label>
+        <label><input type="radio" name="gender" value="female"> Female</label>
+        <label><input type="radio" name="gender" value="other"> Other</label>
+    </fieldset>
+
+    <h4>56. Add a date picker input.</h4>
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob">
+
+    <h4>57. Create a file upload input.</h4>
+    <input type="file" name="resume" accept=".pdf,.doc,.docx">
+
+    <h4>58. Add a range slider input.</h4>
+    <label for="volume">Volume:</label>
+    <input type="range" id="volume" name="volume" min="0" max="100" value="50">
+
+    <h4>59. Create a color picker input.</h4>
+    <label for="favcolor">Favorite Color:</label>
+    <input type="color" id="favcolor" name="favcolor" value="#ff0000">
+
+    <h4>60. Add a search input with placeholder.</h4>
+    <input type="search" name="q" placeholder="Search...">
+
+    <h3>12. Advanced Tables</h3>
+
+    <h4>61. Create a table with thead, tbody, and tfoot.</h4>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Apple</td>
+                <td>$1.00</td>
+            </tr>
+            <tr>
+                <td>Banana</td>
+                <td>$0.50</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Total</td>
+                <td>$1.50</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <h4>62. Add a caption to a table.</h4>
+    <table border="1">
+        <caption>Monthly Sales Report</caption>
+        <tr>
+            <th>Month</th>
+            <th>Sales</th>
+        </tr>
+        <tr>
+            <td>January</td>
+            <td>$10,000</td>
+        </tr>
+    </table>
+
+    <h4>63. Create a table with grouped columns using colgroup.</h4>
+    <table border="1">
+        <colgroup>
+            <col style="background-color: #f0f0f0">
+            <col span="2" style="background-color: #e0e0e0">
+        </colgroup>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>25</td>
+            <td>New York</td>
+        </tr>
+    </table>
+
+    <h4>64. Style alternate table rows using CSS classes.</h4>
+    <style>
+        .odd { background-color: #f9f9f9; }
+        .even { background-color: #ffffff; }
+    </style>
+    <table border="1">
+        <tr class="odd"><td>Row 1</td></tr>
+        <tr class="even"><td>Row 2</td></tr>
+        <tr class="odd"><td>Row 3</td></tr>
+    </table>
+
+    <h4>65. Create a responsive table with horizontal scroll.</h4>
+    <div style="overflow-x: auto;">
+        <table border="1" style="min-width: 600px;">
+            <tr>
+                <th>Name</th><th>Email</th><th>Phone</th><th>Address</th><th>City</th><th>Country</th>
+            </tr>
+            <tr>
+                <td>John</td><td>john@example.com</td><td>123-456-7890</td><td>123 Main St</td><td>New York</td><td>USA</td>
+            </tr>
+        </table>
+    </div>
+
+    <h3>13. Advanced Lists &amp; Navigation</h3>
+
+    <h4>66. Create a breadcrumb navigation using ordered list.</h4>
+    <nav aria-label="Breadcrumb">
+        <ol>
+            <li><a href="/">Home</a></li>
+            <li><a href="/products">Products</a></li>
+            <li><a href="/products/electronics">Electronics</a></li>
+            <li aria-current="page">Smartphones</li>
+        </ol>
+    </nav>
+
+    <h4>67. Build a multi-level dropdown menu using nested lists.</h4>
+    <ul class="dropdown-menu">
+        <li><a href="#">Home</a></li>
+        <li>
+            <a href="#">Products ▼</a>
+            <ul>
+                <li><a href="#">Electronics</a></li>
+                <li><a href="#">Clothing</a></li>
+                <li>
+                    <a href="#">Accessories ▼</a>
+                    <ul>
+                        <li><a href="#">Bags</a></li>
+                        <li><a href="#">Jewelry</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+    <h4>68. Create a pagination component with list items.</h4>
+    <nav aria-label="Pagination">
+        <ul class="pagination">
+            <li><a href="#">&laquo; Previous</a></li>
+            <li><a href="#" aria-current="page">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">Next &raquo;</a></li>
+        </ul>
+    </nav>
+
+    <h4>69. Build a tag cloud using an unordered list.</h4>
+    <ul class="tag-cloud">
+        <li><a href="#" style="font-size: 1.5em;">JavaScript</a></li>
+        <li><a href="#" style="font-size: 1.2em;">HTML</a></li>
+        <li><a href="#" style="font-size: 1.1em;">CSS</a></li>
+        <li><a href="#" style="font-size: 1.3em;">React</a></li>
+        <li><a href="#" style="font-size: 1.0em;">Node.js</a></li>
+    </ul>
+
+    <h4>70. Create a definition list for a glossary.</h4>
+    <dl>
+        <dt>API</dt>
+        <dd>Application Programming Interface - a set of rules for building software applications.</dd>
+        
+        <dt>DOM</dt>
+        <dd>Document Object Model - a programming interface for HTML and XML documents.</dd>
+        
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheets - a stylesheet language for describing document presentation.</dd>
+    </dl>
+
+    <h3>14. Media &amp; Embeds</h3>
+
+    <h4>71. Add a video with multiple source formats.</h4>
+    <video controls width="600">
+        <source src="movie.webm" type="video/webm">
+        <source src="movie.mp4" type="video/mp4">
+        <source src="movie.ogv" type="video/ogg">
+        Your browser does not support the video tag.
+    </video>
+
+    <h4>72. Create a video with poster image.</h4>
+    <video controls poster="thumbnail.jpg" width="600">
+        <source src="movie.mp4" type="video/mp4">
+    </video>
+
+    <h4>73. Add audio with multiple source formats.</h4>
+    <audio controls>
+        <source src="audio.ogg" type="audio/ogg">
+        <source src="audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <h4>74. Embed a Google Map using iframe.</h4>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.12345!2d-73.987654!3d40.758896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1234567890"
+        width="600"
+        height="450"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+
+    <h4>75. Embed a PDF document using iframe.</h4>
+    <iframe src="document.pdf" width="100%" height="500px">
+        <p>Your browser does not support iframes. <a href="document.pdf">Download the PDF</a>.</p>
+    </iframe>
+
+    <h4>76. Create a picture element with multiple sources.</h4>
+    <picture>
+        <source media="(max-width: 600px)" srcset="image-small.jpg">
+        <source media="(max-width: 1200px)" srcset="image-medium.jpg">
+        <img src="image-large.jpg" alt="Responsive image">
+    </picture>
+
+    <h4>77. Add subtitles/captions to a video using track.</h4>
+    <video controls width="600">
+        <source src="movie.mp4" type="video/mp4">
+        <track kind="subtitles" src="subtitles_en.vtt" srclang="en" label="English" default>
+        <track kind="subtitles" src="subtitles_es.vtt" srclang="es" label="Español">
+    </video>
+
+    <h4>78. Create a responsive image using srcset.</h4>
+    <img src="image-800w.jpg"
+         srcset="image-400w.jpg 400w,
+                 image-800w.jpg 800w,
+                 image-1200w.jpg 1200w"
+         sizes="(max-width: 600px) 400px,
+                (max-width: 1200px) 800px,
+                1200px"
+         alt="Responsive image example">
+
+    <h4>79. Add a video with loop and muted attributes.</h4>
+    <video autoplay loop muted playsinline width="600">
+        <source src="background.mp4" type="video/mp4">
+    </video>
+
+    <h4>80. Embed a social media post (Twitter/X, Instagram).</h4>
+    <blockquote class="twitter-tweet">
+        <p lang="en" dir="ltr">Hello world! <a href="https://twitter.com/hashtag/webdev?src=hash">#webdev</a></p>
+    </blockquote>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/ABC123/"></blockquote>
+    <script async src="//www.instagram.com/embed.js"></script>
+
+    <h3>15. Semantic Layout &amp; Structure</h3>
+
+    <h4>81. Create a complete page layout with header, nav, main, aside, footer.</h4>
+    <header>
+        <h1>Site Title</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <article>
+            <h2>Main Article</h2>
+            <p>Content goes here...</p>
+        </article>
+    </main>
+    <aside>
+        <h3>Sidebar</h3>
+        <p>Related links...</p>
+    </aside>
+    <footer>
+        <p>&copy; 2026 My Site</p>
+    </footer>
+
+    <h4>82. Build a blog post layout with article, section, and aside.</h4>
+    <article>
+        <header>
+            <h1>Blog Post Title</h1>
+            <p>By Author Name | <time datetime="2026-01-15">January 15, 2026</time></p>
+        </header>
+        <section>
+            <h2>Introduction</h2>
+            <p>This is the introduction to the blog post...</p>
+        </section>
+        <section>
+            <h2>Main Content</h2>
+            <p>The main content goes here...</p>
+        </section>
+        <aside>
+            <h3>Related Posts</h3>
+            <ul>
+                <li><a href="#">Post 1</a></li>
+                <li><a href="#">Post 2</a></li>
+            </ul>
+        </aside>
+        <footer>
+            <p>Tags: <a href="#">HTML</a>, <a href="#">CSS</a>, <a href="#">JavaScript</a></p>
+        </footer>
+    </article>
+
+    <h4>83. Create a product card using semantic elements.</h4>
+    <article class="product-card">
+        <figure>
+            <img src="product.jpg" alt="Product Name">
+            <figcaption>Product Name - $29.99</figcaption>
+        </figure>
+        <div class="product-details">
+            <h3>Product Name</h3>
+            <p>Short description of the product...</p>
+            <button>Add to Cart</button>
+        </div>
+    </article>
+
+    <h4>84. Build a testimonial section using figure and figcaption.</h4>
+    <figure class="testimonial">
+        <blockquote>
+            <p>"This product changed my life! Highly recommended."</p>
+        </blockquote>
+        <figcaption>
+            <cite>Jane Doe</cite>, CEO at Company Inc.
+        </figcaption>
+    </figure>
+
+    <h4>85. Create a FAQ section using details and summary.</h4>
+    <section class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <details>
+            <summary>What is HTML?</summary>
+            <p>HTML stands for HyperText Markup Language...</p>
+        </details>
+        <details>
+            <summary>What is CSS?</summary>
+            <p>CSS stands for Cascading Style Sheets...</p>
+        </details>
+        <details>
+            <summary>What is JavaScript?</summary>
+            <p>JavaScript is a programming language...</p>
+        </details>
+    </section>
+
+    <h4>86. Build a timeline using semantic elements.</h4>
+    <ol class="timeline">
+        <li>
+            <time datetime="2026-01-01">January 2026</time>
+            <article>
+                <h3>Project Started</h3>
+                <p>Initial planning and research phase.</p>
+            </article>
+        </li>
+        <li>
+            <time datetime="2026-03-15">March 2026</time>
+            <article>
+                <h3>Design Phase</h3>
+                <p>UI/UX design and prototyping.</p>
+            </article>
+        </li>
+        <li>
+            <time datetime="2026-06-01">June 2026</time>
+            <article>
+                <h3>Development</h3>
+                <p>Frontend and backend development.</p>
+            </article>
+        </li>
+    </ol>
+
+    <h4>87. Create a card grid layout using section and article.</h4>
+    <section class="card-grid">
+        <article class="card">
+            <h3>Card 1</h3>
+            <p>Content for card 1...</p>
+        </article>
+        <article class="card">
+            <h3>Card 2</h3>
+            <p>Content for card 2...</p>
+        </article>
+        <article class="card">
+            <h3>Card 3</h3>
+            <p>Content for card 3...</p>
+        </article>
+    </section>
+
+    <h4>88. Build a sidebar navigation with nav and ul.</h4>
+    <aside class="sidebar">
+        <nav aria-label="Sidebar navigation">
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Reports</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <h4>89. Create a hero section with header and main.</h4>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Our Website</h1>
+            <p>Building amazing web experiences with HTML, CSS, and JavaScript.</p>
+            <a href="#get-started" class="btn">Get Started</a>
+        </div>
+    </header>
+    <main>
+        <section id="get-started">
+            <h2>Getting Started</h2>
+            <p>Learn the basics of web development...</p>
+        </section>
+    </main>
+
+    <h4>90. Build a contact section with address and form.</h4>
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <address>
+            <p>123 Main Street</p>
+            <p>New York, NY 10001</p>
+            <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
+            <p>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+        </address>
+        <form>
+            <label for="contactName">Name:</label>
+            <input type="text" id="contactName" name="name" required>
+            <label for="contactEmail">Email:</label>
+            <input type="email" id="contactEmail" name="email" required>
+            <label for="contactMessage">Message:</label>
+            <textarea id="contactMessage" name="message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <h3>16. Forms - Advanced</h3>
+
+    <h4>91. Create a login form with validation attributes.</h4>
+    <form novalidate>
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required minlength="3" maxlength="20" pattern="[a-zA-Z0-9_]+">
+            <span class="error" aria-live="polite"></span>
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required minlength="8">
+            <span class="error" aria-live="polite"></span>
+        </div>
+        <button type="submit">Login</button>
+    </form>
+
+    <h4>92. Build a registration form with multiple field types.</h4>
+    <form>
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+        </fieldset>
+        <fieldset>
+            <legend>Account Details</legend>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="pass">Password:</label>
+            <input type="password" id="pass" name="password" required minlength="8">
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+        </fieldset>
+        <fieldset>
+            <legend>Preferences</legend>
+            <label><input type="checkbox" name="newsletter"> Subscribe to newsletter</label>
+            <label><input type="checkbox" name="terms" required> Accept Terms</label>
+        </fieldset>
+        <button type="submit">Register</button>
+    </form>
+
+    <h4>93. Create a contact form with required fields.</h4>
+    <form>
+        <div>
+            <label for="cName">Name *</label>
+            <input type="text" id="cName" name="name" required>
+        </div>
+        <div>
+            <label for="cEmail">Email *</label>
+            <input type="email" id="cEmail" name="email" required>
+        </div>
+        <div>
+            <label for="contactSubject">Subject</label>
+            <select id="contactSubject" name="subject">
+                <option value="general">General Inquiry</option>
+                <option value="support">Technical Support</option>
+                <option value="billing">Billing</option>
+            </select>
+        </div>
+        <div>
+            <label for="cMsg">Message *</label>
+            <textarea id="cMsg" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit">Send</button>
+    </form>
+
+    <h4>94. Add pattern validation for phone number.</h4>
+    <label for="phone">Phone (US format):</label>
+    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" title="Format: 123-456-7890">
+
+    <h4>95. Create a form with datalist for autocomplete.</h4>
+    <label for="browser">Choose a browser:</label>
+    <input type="text" id="browser" name="browser" list="browsers">
+    <datalist id="browsers">
+        <option value="Chrome">
+        <option value="Firefox">
+        <option value="Safari">
+        <option value="Edge">
+        <option value="Opera">
+    </datalist>
+
+    <h4>96. Build a multi-step form using fieldset.</h4>
+    <form id="multiStepForm">
+        <fieldset class="step active">
+            <legend>Step 1: Account</legend>
+            <label for="stepEmail">Email:</label>
+            <input type="email" id="stepEmail" name="email" required>
+            <button type="button">Next</button>
+        </fieldset>
+        <fieldset class="step">
+            <legend>Step 2: Profile</legend>
+            <label for="stepName">Full Name:</label>
+            <input type="text" id="stepName" name="name" required>
+            <button type="button">Back</button>
+            <button type="button">Next</button>
+        </fieldset>
+        <fieldset class="step">
+            <legend>Step 3: Confirm</legend>
+            <p>Review your information and submit.</p>
+            <button type="button">Back</button>
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+
+    <h4>97. Add custom validation messages using title.</h4>
+    <form>
+        <label for="userTitle">Username:</label>
+        <input type="text" id="userTitle" name="username" required pattern="[a-zA-Z0-9]{5,}" title="Username must be at least 5 alphanumeric characters">
+        <button type="submit">Submit</button>
+    </form>
+
+    <h4>98. Create a form with optgroup in select.</h4>
+    <label for="framework">Choose a framework:</label>
+    <select id="framework" name="framework">
+        <optgroup label="Frontend">
+            <option value="react">React</option>
+            <option value="vue">Vue.js</option>
+            <option value="angular">Angular</option>
+        </optgroup>
+        <optgroup label="Backend">
+            <option value="node">Node.js</option>
+            <option value="django">Django</option>
+            <option value="rails">Ruby on Rails</option>
+        </optgroup>
+    </select>
+
+    <h4>99. Build a survey form with radio groups.</h4>
+    <form>
+        <fieldset>
+            <legend>How satisfied are you with our service?</legend>
+            <label><input type="radio" name="satisfaction" value="very-satisfied"> Very Satisfied</label>
+            <label><input type="radio" name="satisfaction" value="satisfied"> Satisfied</label>
+            <label><input type="radio" name="satisfaction" value="neutral"> Neutral</label>
+            <label><input type="radio" name="satisfaction" value="dissatisfied"> Dissatisfied</label>
+            <label><input type="radio" name="satisfaction" value="very-dissatisfied"> Very Dissatisfied</label>
+        </fieldset>
+        <fieldset>
+            <legend>Would you recommend us?</legend>
+            <label><input type="radio" name="recommend" value="yes"> Yes</label>
+            <label><input type="radio" name="recommend" value="no"> No</label>
+        </fieldset>
+        <button type="submit">Submit Survey</button>
+    </form>
+
+    <h4>100. Create a newsletter signup form.</h4>
+    <form action="/subscribe" method="POST">
+        <label for="newsletterEmail">Email address:</label>
+        <input type="email" id="newsletterEmail" name="email" required placeholder="you@example.com">
+        <button type="submit">Subscribe</button>
+        <p class="privacy-note">We respect your privacy. Unsubscribe at any time.</p>
+    </form>
+
+    <hr>
+
+    <!-- 🟠 Level 3: Professional (101 - 150) -->
+    <h2>🟠 Level 3: Professional (101 - 150)</h2>
+
+    <h3>17. Accessibility (a11y)</h3>
+
+    <h4>101. Add proper heading hierarchy (h1-h6) to a page.</h4>
+    <h1>Main Page Title</h1>
+    <section>
+        <h2>Section Title</h2>
+        <article>
+            <h3>Article Title</h3>
+            <section>
+                <h4>Subsection Title</h4>
+            </section>
+        </article>
+    </section>
+
+    <h4>102. Create accessible form labels using label element.</h4>
+    <form>
+        <div>
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required>
+        </div>
+        <div>
+            <label for="emailAddress">Email Address:</label>
+            <input type="email" id="emailAddress" name="email" required>
+        </div>
+    </form>
+
+    <h4>103. Add aria-label to icon-only buttons.</h4>
+    <button aria-label="Close dialog">
+        <svg aria-hidden="true"><use xlink:href="#icon-close"></use></svg>
+    </button>
+    <button aria-label="Search">
+        <svg aria-hidden="true"><use xlink:href="#icon-search"></use></svg>
+    </button>
+
+    <h4>104. Use aria-describedby for form help text.</h4>
+    <label for="passHelp">Password:</label>
+    <input type="password" id="passHelp" aria-describedby="passwordHelp">
+    <span id="passwordHelp">Must be at least 8 characters with one number and one special character.</span>
+
+    <h4>105. Create skip navigation link.</h4>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <nav>...</nav>
+    <main id="main-content">
+        <h1>Page Title</h1>
+    </main>
+
+    <h4>106. Add role="alert" for dynamic messages.</h4>
+    <div role="alert" aria-live="assertive">
+        Your session will expire in 5 minutes.
+    </div>
+
+    <h4>107. Use aria-live for live region updates.</h4>
+    <div aria-live="polite" aria-atomic="true" id="notifications">
+        <!-- Dynamic content updates will be announced -->
+    </div>
+
+    <h4>108. Create accessible modal dialog with aria-modal.</h4>
+    <div role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDesc">
+        <h2 id="modalTitle">Confirm Action</h2>
+        <p id="modalDesc">Are you sure you want to delete this item?</p>
+        <button>Cancel</button>
+        <button>Delete</button>
+    </div>
+
+    <h4>109. Add aria-expanded to collapsible elements.</h4>
+    <button aria-expanded="false" aria-controls="panel1">Show Details</button>
+    <div id="panel1" hidden>
+        <p>Detailed content here...</p>
+    </div>
+
+    <h4>110. Use aria-controls for related elements.</h4>
+    <button aria-controls="searchResults" aria-expanded="false">Search</button>
+    <div id="searchResults" role="region" aria-live="polite">
+        <!-- Search results appear here -->
+    </div>
+
+    <h3>18. SEO &amp; Meta Tags</h3>
+
+    <h4>111. Add Open Graph meta tags for social sharing.</h4>
+    <pre><code>&lt;head&gt;
+    &lt;meta property="og:title" content="Page Title"&gt;
+    &lt;meta property="og:description" content="Page description for social sharing."&gt;
+    &lt;meta property="og:image" content="https://example.com/image.jpg"&gt;
+    &lt;meta property="og:url" content="https://example.com/page"&gt;
+    &lt;meta property="og:type" content="website"&gt;
+    &lt;meta property="og:site_name" content="Site Name"&gt;
+&lt;/head&gt;</code></pre>
+
+    <h4>112. Add Twitter Card meta tags.</h4>
+    <pre><code>&lt;head&gt;
+    &lt;meta name="twitter:card" content="summary_large_image"&gt;
+    &lt;meta name="twitter:site" content="@username"&gt;
+    &lt;meta name="twitter:title" content="Page Title"&gt;
+    &lt;meta name="twitter:description" content="Page description for Twitter."&gt;
+    &lt;meta name="twitter:image" content="https://example.com/image.jpg"&gt;
+&lt;/head&gt;</code></pre>
+
+    <h4>113. Create JSON-LD structured data for Article.</h4>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Article Title",
+        "author": {
+            "@type": "Person",
+            "name": "Author Name"
+        },
+        "datePublished": "2026-01-15",
+        "image": "https://example.com/image.jpg",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Publisher Name"
+        }
+    }
+    </script>
+
+    <h4>114. Add JSON-LD for Product schema.</h4>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Product Name",
+        "image": "https://example.com/product.jpg",
+        "description": "Product description",
+        "brand": {
+            "@type": "Brand",
+            "name": "Brand Name"
+        },
+        "offers": {
+            "@type": "Offer",
+            "priceCurrency": "USD",
+            "price": "29.99",
+            "availability": "https://schema.org/InStock"
+        }
+    }
+    </script>
+
+    <h4>115. Create JSON-LD for BreadcrumbList.</h4>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://example.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Category",
+                "item": "https://example.com/category"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Product",
+                "item": "https://example.com/category/product"
+            }
+        ]
+    }
+    </script>
+
+    <h4>116. Add canonical URL link tag.</h4>
+    <link rel="canonical" href="https://example.com/preferred-url">
+
+    <h4>117. Create hreflang tags for multilingual sites.</h4>
+    <link rel="alternate" hreflang="en" href="https://example.com/en/page">
+    <link rel="alternate" hreflang="es" href="https://example.com/es/page">
+    <link rel="alternate" hreflang="fr" href="https://example.com/fr/page">
+    <link rel="alternate" hreflang="x-default" href="https://example.com/">
+
+    <h4>118. Add meta robots tag for indexing control.</h4>
+    <meta name="robots" content="index, follow">
+
+    <h4>119. Create sitemap.xml reference in HTML.</h4>
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+
+    <h4>120. Add theme-color meta tag for PWA.</h4>
+    <meta name="theme-color" content="#317EFB">
+
+    <h3>19. Performance &amp; Optimization</h3>
+
+    <h4>121. Add preload for critical CSS.</h4>
+    <link rel="preload" href="critical.css" as="style">
+
+    <h4>122. Add preconnect for third-party domains.</h4>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <h4>123. Use prefetch for next page resources.</h4>
+    <link rel="prefetch" href="/next-page.html">
+
+    <h4>124. Add dns-prefetch for external resources.</h4>
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+
+    <h4>125. Implement lazy loading for images.</h4>
+    <img src="image.jpg" alt="Description" loading="lazy" width="800" height="600">
+
+    <h4>126. Add fetchpriority for LCP image.</h4>
+    <img src="hero.jpg" alt="Hero image" fetchpriority="high" width="1200" height="600">
+
+    <h4>127. Use decoding="async" for images.</h4>
+    <img src="image.jpg" alt="Description" decoding="async" width="800" height="600">
+
+    <h4>128. Add resource hints for fonts.</h4>
+    <link rel="preload" href="font.woff2" as="font" type="font/woff2" crossorigin>
+
+    <h4>129. Implement critical CSS inlining.</h4>
+    <style>
+        header { background: #333; color: white; padding: 1rem; }
+    </style>
+
+    <h4>130. Add modulepreload for JavaScript modules.</h4>
+    <link rel="modulepreload" href="/js/main.js">
+
+    <h3>20. Web Components &amp; Custom Elements</h3>
+
+    <h4>131. Create a custom element using class syntax.</h4>
+    <script>
+    class MyElement extends HTMLElement {
+        constructor() {
+            super();
+            this.attachShadow({ mode: 'open' });
+        }
+        connectedCallback() {
+            this.shadowRoot.innerHTML = `<style>:host { display: block; }</style><p>Hello from custom element!</p>`;
+        }
+    }
+    customElements.define('my-element', MyElement);
+    </script>
+    <my-element></my-element>
+
+    <h4>132. Define a custom element with observedAttributes.</h4>
+    <script>
+    class UserCard extends HTMLElement {
+        static get observedAttributes() { return ['name', 'avatar']; }
+        constructor() {
+            super();
+            this.attachShadow({ mode: 'open' });
+        }
+        attributeChangedCallback(name, oldValue, newValue) {
+            this.render();
+        }
+        render() {
+            this.shadowRoot.innerHTML = `
+                <style>img { border-radius: 50%; }</style>
+                <img src="${this.getAttribute('avatar')}" alt="${this.getAttribute('name')}">
+                <h3>${this.getAttribute('name')}</h3>
+            `;
+        }
+    }
+    customElements.define('user-card', UserCard);
+    </script>
+    <user-card name="John Doe" avatar="john.jpg"></user-card>
+
+    <h4>133. Use connectedCallback and disconnectedCallback.</h4>
+    <script>
+    class TimerElement extends HTMLElement {
+        constructor() {
+            super();
+            this.interval = null;
+        }
+        connectedCallback() {
+            this.interval = setInterval(() => {
+                this.textContent = new Date().toLocaleTimeString();
+            }, 1000);
+        }
+        disconnectedCallback() {
+            clearInterval(this.interval);
+        }
+    }
+    customElements.define('live-timer', TimerElement);
+    </script>
+    <live-timer></live-timer>
+
+    <h4>134. Implement attributeChangedCallback.</h4>
+    <script>
+    class Counter extends HTMLElement {
+        static get observedAttributes() { return ['count']; }
+        constructor() {
+            super();
+            this.attachShadow({ mode: 'open' });
+        }
+        attributeChangedCallback(name, oldValue, newValue) {
+            this.shadowRoot.textContent = `Count: ${newValue}`;
+        }
+    }
+    customElements.define('my-counter', Counter);
+    </script>
+    <my-counter count="0"></my-counter>
+
+    <h4>135. Create a Shadow DOM for encapsulation.</h4>
+    <script>
+    class StyledCard extends HTMLElement {
+        constructor() {
+            super();
+            const shadow = this.attachShadow({ mode: 'open' });
+            shadow.innerHTML = `
+                <style>
+                    .card { border: 1px solid #ccc; border-radius: 8px; padding: 1rem; }
+                    .card h3 { margin-top: 0; color: #333; }
+                </style>
+                <div class="card">
+                    <h3><slot name="title">Default Title</slot></h3>
+                    <slot>Default content</slot>
+                </div>
+            `;
+        }
+    }
+    customElements.define('styled-card', StyledCard);
+    </script>
+    <styled-card>
+        <span slot="title">Custom Title</span>
+        <p>Custom content goes here.</p>
+    </styled-card>
+
+    <h4>136. Use slot for content projection.</h4>
+    <script>
+    class Layout extends HTMLElement {
+        constructor() {
+            super();
+            this.attachShadow({ mode: 'open' });
+            this.shadowRoot.innerHTML = `
+                <style>
+                    header { background: #f0f0f0; padding: 1rem; }
+                    main { padding: 1rem; }
+                    footer { background: #f0f0f0; padding: 1rem; text-align: center; }
+                </style>
+                <header><slot name="header">Default Header</slot></header>
+                <main><slot>Main content</slot></main>
+                <footer><slot name="footer">Default Footer</slot></footer>
+            `;
+        }
+    }
+    customElements.define('page-layout', Layout);
+    </script>
+    <page-layout>
+        <h1 slot="header">My Site</h1>
+        <p>Welcome to my page!</p>
+        <p slot="footer">&copy; 2026</p>
+    </page-layout>
+
+    <h4>137. Create a template element for cloning.</h4>
+    <template id="card-template">
+        <style>
+            .card { border: 1px solid #ddd; border-radius: 4px; padding: 1rem; margin: 0.5rem; }
+        </style>
+        <article class="card">
+            <h3 class="title"></h3>
+            <p class="description"></p>
+            <button class="action">Action</button>
+        </article>
+    </template>
+
+    <h4>138. Build a reusable button component.</h4>
+    <script>
+    class CustomButton extends HTMLElement {
+        constructor() {
+            super();
+            this.attachShadow({ mode: 'open' });
+            this.shadowRoot.innerHTML = `
+                <style>
+                    button { padding: 0.5rem 1rem; border: none; border-radius: 4px; cursor: pointer; }
+                    .primary { background: #007bff; color: white; }
+                    .secondary { background: #6c757d; color: white; }
+                    .danger { background: #dc3545; color: white; }
+                </style>
+                <button class="${this.getAttribute('variant') || 'primary'}">
+                    <slot>Button</slot>
+                </button>
+            `;
+        }
+    }
+    customElements.define('custom-button', CustomButton);
+    </script>
+    <custom-button variant="primary">Primary</custom-button>
+    <custom-button variant="secondary">Secondary</custom-button>
+    <custom-button variant="danger">Delete</custom-button>
+
+    <h4>139. Create a custom form input component.</h4>
+    <script>
+    class CustomInput extends HTMLElement {
+        constructor() {
+            super();
+            this.attachShadow({ mode: 'open' });
+            this.shadowRoot.innerHTML = `
+                <style>
+                    .input-wrapper { display: flex; flex-direction: column; gap: 0.25rem; }
+                    label { font-weight: bold; font-size: 0.875rem; }
+                    input { padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px; }
+                </style>
+                <div class="input-wrapper">
+                    <label><slot name="label">Input</slot></label>
+                    <input type="${this.getAttribute('type') || 'text'}" 
+                           placeholder="${this.getAttribute('placeholder') || ''}">
+                </div>
+            `;
+        }
+    }
+    customElements.define('custom-input', CustomInput);
+    </script>
+    <form>
+        <custom-input label="Email" type="email" placeholder="you@example.com"></custom-input>
+    </form>
+
+    <h4>140. Build a modal dialog web component.</h4>
+    <script>
+    class ModalDialog extends HTMLElement {
+        constructor() {
+            super();
+            this.attachShadow({ mode: 'open' });
+            this.shadowRoot.innerHTML = `
+                <style>
+                    .backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.5); display: none; }
+                    .dialog { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 2rem; border-radius: 8px; }
+                    :host([open]) .backdrop { display: block; }
+                </style>
+                <div class="backdrop"></div>
+                <div class="dialog" role="dialog" aria-modal="true">
+                    <h2><slot name="title">Dialog</slot></h2>
+                    <slot></slot>
+                </div>
+            `;
+        }
+    }
+    customElements.define('modal-dialog', ModalDialog);
+    </script>
+    <modal-dialog>
+        <span slot="title">Confirm Delete</span>
+        <p>Are you sure you want to delete this item?</p>
+    </modal-dialog>
+
+    <h3>21. Advanced HTML5 APIs</h3>
+
+    <h4>141. Use localStorage to persist form data.</h4>
+    <form id="persistForm">
+        <input type="text" name="name" placeholder="Name">
+        <textarea name="message" placeholder="Message"></textarea>
+        <button type="submit">Save</button>
+    </form>
+    <script>
+    const form = document.getElementById('persistForm');
+    form.addEventListener('input', () => {
+        const data = Object.fromEntries(new FormData(form));
+        localStorage.setItem('formData', JSON.stringify(data));
+    });
+    </script>
+
+    <h4>142. Implement sessionStorage for temporary data.</h4>
+    <script>
+    sessionStorage.setItem('wizardState', JSON.stringify({ step: 2 }));
+    </script>
+
+    <h4>143. Use IndexedDB for client-side storage.</h4>
+    <script>
+    const request = indexedDB.open('MyDatabase', 1);
+    request.onupgradeneeded = (event) => {
+        const db = event.target.result;
+        db.createObjectStore('users', { keyPath: 'id', autoIncrement: true });
+    };
+    </script>
+
+    <h4>144. Implement Service Worker registration.</h4>
+    <script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js');
+    }
+    </script>
+
+    <h4>145. Add Cache API for offline support.</h4>
+    <script>
+    caches.open('v1').then((cache) => cache.addAll(['/', '/index.html', '/styles.css']));
+    </script>
+
+    <h4>146. Use Geolocation API with fallback.</h4>
+    <button onclick="navigator.geolocation.getCurrentPosition(pos => console.log(pos))">Get Location</button>
+
+    <h4>147. Implement Drag and Drop API.</h4>
+    <div id="dropZone" style="border: 2px dashed #ccc; padding: 2rem; text-align: center;">
+        Drop files here
+    </div>
+
+    <h4>148. Use File API for file handling.</h4>
+    <input type="file" id="fileInput" multiple accept="image/*">
+
+    <h4>149. Implement Web Share API.</h4>
+    <button onclick="if (navigator.share) navigator.share({ title: document.title, url: window.location.href });">Share This Page</button>
+
+    <h4>150. Use IntersectionObserver for lazy loading.</h4>
+    <img data-src="image1.jpg" alt="Image 1" class="lazy">
+    <script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.src = entry.target.dataset.src;
+                observer.unobserve(entry.target);
+            }
+        });
+    });
+    document.querySelectorAll('.lazy').forEach(img => observer.observe(img));
+    </script>
+
+    <hr>
+
+    <!-- 🔴 Level 4: Expert (151 - 200) -->
+    <h2>🔴 Level 4: Expert (151 - 200)</h2>
+
+    <h3>22. Progressive Web Apps (PWA)</h3>
+
+    <h4>151. Create a Web App Manifest file.</h4>
+    <pre><code>{
+    "name": "My Progressive Web App",
+    "short_name": "MyPWA",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#317EFB"
+}</code></pre>
+
+    <h4>152. Add manifest link to HTML head.</h4>
+    <link rel="manifest" href="/manifest.json">
+
+    <h4>153. Configure service worker for offline caching.</h4>
+    <script>
+    self.addEventListener('fetch', (event) => {
+        event.respondWith(
+            caches.match(event.request).then((cached) => cached || fetch(event.request))
+        );
+    });
+    </script>
+
+    <h4>154. Implement install prompt handling.</h4>
+    <button id="installBtn" style="display: none;">Install App</button>
+
+    <h4>155. Add background sync for form submissions.</h4>
+    <script>
+    navigator.serviceWorker.ready.then((reg) => {
+        return reg.sync.register('form-submit');
+    });
+    </script>
+
+    <h4>156. Implement push notifications setup.</h4>
+    <script>
+    Notification.requestPermission().then(permission => {
+        if (permission === 'granted') console.log('Notification permission granted.');
+    });
+    </script>
+
+    <h4>157. Create offline fallback page.</h4>
+    <div>
+        <h1>You're Offline</h1>
+        <p>Check your connection and try again.</p>
+        <button onclick="window.location.reload()">Retry</button>
+    </div>
+
+    <h4>158. Add app shortcuts in manifest.</h4>
+    <pre><code>{
+    "shortcuts": [
+        {
+            "name": "New Document",
+            "url": "/new"
+        }
+    ]
+}</code></pre>
+
+    <h4>159. Configure splash screens for iOS.</h4>
+    <link rel="apple-touch-startup-image" href="/splash-640x1136.png">
+
+    <h4>160. Implement periodic background sync.</h4>
+    <script>
+    async function registerPeriodicSync() {
+        const reg = await navigator.serviceWorker.ready;
+        if ('periodicSync' in reg) {
+            await reg.periodicSync.register('content-sync', { minInterval: 24 * 60 * 60 * 1000 });
+        }
+    }
+    </script>
+
+    <h3>23. Internationalization (i18n)</h3>
+
+    <h4>161. Set lang attribute with region code.</h4>
+    <p>Set <code>&lt;html lang="en-US"&gt;</code> in the HTML root element.</p>
+
+    <h4>162. Add dir="rtl" for RTL languages.</h4>
+    <div dir="rtl" lang="ar">
+        <p>هذا نص باللغة العربية</p>
+    </div>
+
+    <h4>163. Use bdi for bidirectional text isolation.</h4>
+    <ul>
+        <li>User <bdi>John Doe</bdi>: 5 posts</li>
+        <li>User <bdi>محمد علي</bdi>: 3 posts</li>
+    </ul>
+
+    <h4>164. Implement bdo for text direction override.</h4>
+    <p><bdo dir="rtl">Overridden: Hello World</bdo></p>
+
+    <h4>165. Add translate="no" for brand names.</h4>
+    <p>Welcome to <span translate="no">Google</span>!</p>
+
+    <h4>166. Use data-* attributes for localized content.</h4>
+    <h1 data-i18n="title">Welcome</h1>
+
+    <h4>167. Create language switcher navigation.</h4>
+    <nav aria-label="Language selection">
+        <ul>
+            <li><a href="?lang=en" hreflang="en">English</a></li>
+            <li><a href="?lang=es" hreflang="es">Español</a></li>
+        </ul>
+    </nav>
+
+    <h4>168. Implement hreflang annotations.</h4>
+    <link rel="alternate" hreflang="en" href="https://example.com/en/">
+    <link rel="alternate" hreflang="es" href="https://example.com/es/">
+
+    <h4>169. Use time element with datetime for dates.</h4>
+    <time datetime="2026-01-15T10:30:00-05:00">January 15, 2026</time>
+
+    <h4>170. Format numbers with locale-aware output.</h4>
+    <script>
+    console.log(new Intl.NumberFormat('en-US').format(1234567.89));
+    </script>
+
+    <h3>24. Security &amp; Privacy</h3>
+
+    <h4>171. Add Content Security Policy meta tag.</h4>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self';">
+
+    <h4>172. Implement Referrer-Policy header.</h4>
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <h4>173. Add Cross-Origin-Opener-Policy.</h4>
+    <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
+
+    <h4>174. Use Cross-Origin-Embedder-Policy.</h4>
+    <meta http-equiv="Cross-Origin-Embedder-Policy" content="require-corp">
+
+    <h4>175. Implement Permissions-Policy header.</h4>
+    <meta http-equiv="Permissions-Policy" content="geolocation=(self), camera=()">
+
+    <h4>176. Add nonce to inline scripts.</h4>
+    <script nonce="r4nd0mN0nc3V4lu3">
+        console.log('Secure script');
+    </script>
+
+    <h4>177. Use integrity attribute for external scripts.</h4>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
+
+    <h4>178. Implement Trusted Types policy.</h4>
+    <meta http-equiv="Content-Security-Policy" content="require-trusted-types-for 'script'">
+
+    <h4>179. Add sandbox to untrusted iframes.</h4>
+    <iframe src="https://untrusted.example.com" sandbox></iframe>
+
+    <h4>180. Use rel="noopener noreferrer" for external links.</h4>
+    <a href="https://external.com" target="_blank" rel="noopener noreferrer">External Link</a>
+
+    <h3>25. Advanced Semantics &amp; Microdata</h3>
+
+    <h4>181. Add microdata for Person schema.</h4>
+    <div itemscope itemtype="https://schema.org/Person">
+        <h1 itemprop="name">John Doe</h1>
+        <p>Job: <span itemprop="jobTitle">Software Engineer</span></p>
+    </div>
+
+    <h4>182. Implement microdata for Organization.</h4>
+    <div itemscope itemtype="https://schema.org/Organization">
+        <h1 itemprop="name">Tech Corporation</h1>
+        <link itemprop="url" href="https://techcorp.example.com">
+    </div>
+
+    <h4>183. Add microdata for Event schema.</h4>
+    <div itemscope itemtype="https://schema.org/Event">
+        <h2 itemprop="name">Web Development Conference 2026</h2>
+        <time itemprop="startDate" datetime="2026-06-15T09:00">June 15, 2026</time>
+    </div>
+
+    <h4>184. Create microdata for Review/Rating.</h4>
+    <div itemscope itemtype="https://schema.org/Review">
+        <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Product">
+            <span itemprop="name">Amazing Web Framework</span>
+        </div>
+        <p itemprop="reviewBody">This framework changed how I build web apps!</p>
+    </div>
+
+    <h4>185. Implement microdata for FAQPage.</h4>
+    <div itemscope itemtype="https://schema.org/FAQPage">
+        <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+            <h3 itemprop="name">What is HTML?</h3>
+            <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                <p itemprop="text">HTML stands for HyperText Markup Language.</p>
+            </div>
+        </div>
+    </div>
+
+    <h4>186. Add microdata for HowTo schema.</h4>
+    <div itemscope itemtype="https://schema.org/HowTo">
+        <h1 itemprop="name">How to Create an HTML Page</h1>
+        <div itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
+            <p itemprop="text">Create a file named index.html.</p>
+        </div>
+    </div>
+
+    <h4>187. Create microdata for Recipe schema.</h4>
+    <div itemscope itemtype="https://schema.org/Recipe">
+        <h1 itemprop="name">Cookies</h1>
+        <ul>
+            <li itemprop="recipeIngredient">2 cups flour</li>
+            <li itemprop="recipeIngredient">1 cup sugar</li>
+        </ul>
+    </div>
+
+    <h4>188. Implement microdata for VideoObject.</h4>
+    <div itemscope itemtype="https://schema.org/VideoObject">
+        <h2 itemprop="name">HTML Tutorial</h2>
+        <meta itemprop="contentUrl" content="https://example.com/video.mp4">
+    </div>
+
+    <h4>189. Add microdata for Course schema.</h4>
+    <div itemscope itemtype="https://schema.org/Course">
+        <h1 itemprop="name">Web Development Bootcamp</h1>
+    </div>
+
+    <h4>190. Create microdata for JobPosting.</h4>
+    <div itemscope itemtype="https://schema.org/JobPosting">
+        <h1 itemprop="title">Frontend Developer</h1>
+        <p itemprop="description">We are hiring...</p>
+    </div>
+
+    <h3>26. Modern HTML &amp; Emerging Features</h3>
+
+    <h4>191. Use popover attribute for tooltips.</h4>
+    <button popovertarget="tooltip1">Hover for tooltip</button>
+    <div id="tooltip1" popover role="tooltip">
+        <p>This is a popover tooltip!</p>
+    </div>
+
+    <h4>192. Implement dialog with showModal().</h4>
+    <dialog id="modal">
+        <h2>Confirm Action</h2>
+        <p>Are you sure you want to proceed?</p>
+        <button onclick="document.getElementById('modal').close()">Cancel</button>
+        <button onclick="document.getElementById('modal').close()">Confirm</button>
+    </dialog>
+    <button onclick="document.getElementById('modal').showModal()">Open Dialog</button>
+
+    <h4>193. Create an accordion using details and summary.</h4>
+    <details>
+        <summary>Section 1</summary>
+        <p>Content for section 1.</p>
+    </details>
+    <details>
+        <summary>Section 2</summary>
+        <p>Content for section 2.</p>
+    </details>
+
+    <h4>194. Use the search element for search sections.</h4>
+    <search>
+        <form action="/search">
+            <input type="search" name="q" placeholder="Search website...">
+            <button type="submit">Search</button>
+        </form>
+    </search>
+
+    <h4>195. Implement loading="lazy" for images and iframes.</h4>
+    <img src="large-image.jpg" alt="Lazy image" loading="lazy">
+    <iframe src="map.html" loading="lazy"></iframe>
+
+    <h4>196. Add fetchpriority="high" to critical assets.</h4>
+    <img src="banner.jpg" alt="Main Banner" fetchpriority="high">
+
+    <h4>197. Use inert attribute to disable non-active UI parts.</h4>
+    <div inert>
+        <button>Disabled Button</button>
+        <input type="text" placeholder="Can't focus or edit">
+    </div>
+
+    <h4>198. Build an interactive popover menu.</h4>
+    <button popovertarget="userMenu">Account</button>
+    <div id="userMenu" popover>
+        <ul>
+            <li><a href="/profile">Profile</a></li>
+            <li><a href="/settings">Settings</a></li>
+            <li><a href="/logout">Logout</a></li>
+        </ul>
+    </div>
+
+    <h4>199. Use color-scheme meta tag for dark mode support.</h4>
+    <meta name="color-scheme" content="light dark">
+
+    <h4>200. Create a responsive image with picture and webp fallback.</h4>
+    <picture>
+        <source srcset="image.webp" type="image/webp">
+        <source srcset="image.jpg" type="image/jpeg">
+        <img src="image.jpg" alt="Fallback JPG image" loading="lazy">
+    </picture>
+
 </body>
 </html>
-
-
-<!-- 2. Add a title to your webpage. -->
-<title>My First HTML Page</title>
-
-
-
-<!-- 3. Create a webpage with a heading and a paragraph. -->
-<h1>Welcome</h1>
-<p>This is my first webpage.</p>
-
-
-<!-- 4. Add a favicon to a webpage. -->
-<link rel="icon" href="favicon.ico">
-
-
-<!-- 5. Set the language of the webpage to English. -->
-<html lang="en">
-
-<!-- Headings & Text -->
-
-<!-- 6. Create all six heading tags (h1 to h6). -->
-<h1>Heading 1</h1>
-<h2>Heading 2</h2>
-<h3>Heading 3</h3>
-<h4>Heading 4</h4>
-<h5>Heading 5</h5>
-<h6>Heading 6</h6>
-
-
-<!-- 7. Create a paragraph containing at least three sentences. -->
-<p>
-HTML is the foundation of web development.
-It is easy to learn.
-It works together with CSS and JavaScript.
-</p>
-
-
-<!-- 8. Make a word bold using HTML. -->
-<p>This is <strong>important</strong>.</p>
-
-
-<!-- 9. Make a word italic using HTML. -->
-<p>This is <em>italic</em> text.</p>
-
-<!-- 10. Insert a horizontal line between two paragraphs. -->
-<p>First paragraph.</p>
-<hr>
-<p>Second paragraph.</p>
-
-<!-- Links & Images -->
-
-
-<!-- 11. Create a hyperlink to Google. -->
-<a href="https://www.google.com">Google</a>
-
-
-<!-- 12. Open a hyperlink in a new tab. -->
-<a href="https://www.google.com" target="_blank">
-    Google
-</a>
-
-<!-- 13. Display an image on the webpage. -->
-<img src="image.jpg" alt="Sample Image">
-
-
-<!-- 14. Add alternative text to an image. -->
-<img src="cat.jpg" alt="A cute cat">
-
-
-<!-- 15. Create an image that acts as a hyperlink. -->
-<a href="https://example.com">
-    <img src="logo.png" alt="Logo">
-</a>
-
-<!-- Lists -->
-
-<!-- 16. Create an unordered list of five fruits. -->
-<ul>
-    <li>Apple</li>
-    <li>Mango</li>
-    <li>Banana</li>
-    <li>Orange</li>
-    <li>Grapes</li>
-</ul>
-
-
-<!-- 17. Create an ordered list of five programming languages. -->
-<ol>
-    <li>C</li>
-    <li>C++</li>
-    <li>Java</li>
-    <li>Python</li>
-    <li>JavaScript</li>
-</ol>
-
-
-<!-- 18. Create a nested list. -->
-<ul>
-    <li>Frontend
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-        </ul>
-    </li>
-</ul>
-
-
-<!-- 19. Create a description list. -->
-<dl>
-    <dt>HTML</dt>
-    <dd>Markup Language</dd>
-
-    <dt>CSS</dt>
-    <dd>Stylesheet Language</dd>
-</dl>
-
-<!-- 20. Add list items using the correct HTML tag. -->
-<ul>
-    <li>Item One</li>
-    <li>Item Two</li>
-    <li>Item Three</li>
-</ul>
-
-<!-- Tables -->
-
-<!-- 21. Create a table with three columns. -->
-<table border="1">
-    <tr>
-        <th>Name</th>
-        <th>Age</th>
-        <th>City</th>
-    </tr>
-</table>
-
-<!-- 22. Add a table header. -->
-<table border="1">
-    <tr>
-        <th>Name</th>
-        <th>Email</th>
-    </tr>
-</table>
-
-
-<!-- 23. Add three rows of data. -->
-<table border="1">
-    <tr>
-        <td>John</td>
-        <td>20</td>
-    </tr>
-
-    <tr>
-        <td>Jane</td>
-        <td>22</td>
-    </tr>
-
-    <tr>
-        <td>Alex</td>
-        <td>25</td>
-    </tr>
-</table>
-
-
-<!-- 24. Merge two columns using colspan. -->
-<table border="1">
-    <tr>
-        <td colspan="2">Merged Columns</td>
-    </tr>
-</table>
-
-
-<!-- 25. Merge two rows using rowspan. -->
-<table border="1">
-    <tr>
-        <td rowspan="2">Merged Rows</td>
-        <td>Row 1</td>
-    </tr>
-
-    <tr>
-        <td>Row 2</td>
-    </tr>
-</table>
-<!-- Forms -->
-
-<!-- 26. Create a simple form. -->
-<form>
-
-</form>
-
-<!-- 27. Add a text input field. -->
-<form>
-    <input type="text" placeholder="Enter your name">
-</form>
-
-<!-- 28. Add an email input field. -->
-<form>
-    <input type="email" placeholder="Enter your email">
-</form>
-
-
-<!-- 29. Add a password input field. -->
-<form>
-    <input type="password" placeholder="Enter your password">
-</form>
-
-
-<!-- 30. Add a submit button. -->
-<form>
-    <input type="submit" value="Submit">
-</form>
-
-<!-- Semantic HTML -->
-
-<!-- 31. Create a header section. -->
-<header>
-    <h1>My Website</h1>
-</header>
-
-
-<!-- 32. Create a navigation bar. -->
-<nav>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Contact</a>
-</nav>
-
-
-<!-- 33. Create a main content section. -->
-<main>
-    <h2>Main Content</h2>
-    <p>This is the main content of the webpage.</p>
-</main>
-
-
-<!-- 34. Create an article with a section. -->
-<article>
-    <h2>Article Title</h2>
-
-    <section>
-        <h3>Section Title</h3>
-        <p>This is the section content.</p>
-    </section>
-</article>
-
-
-<!-- 35. Create a footer. -->
-<footer>
-    <p>&copy; 2026 My Website. All Rights Reserved.</p>
-</footer>
-
-<!-- Multimedia -->
-
-<!-- 36. Add an audio file. -->
-<audio controls>
-    <source src="audio.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-</audio>
-
-
-<!-- 37. Add a video file. -->
-<video controls width="500">
-    <source src="video.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
-
-
-<!-- 38. Embed a YouTube video. -->
-<iframe
-    width="560"
-    height="315"
-    src="https://www.youtube.com/embed/VIDEO_ID"
-    title="YouTube Video"
-    allowfullscreen>
-</iframe>
-
-
-<!-- 39. Add controls to a video. -->
-<video controls>
-    <source src="movie.mp4" type="video/mp4">
-</video>
-
-
-<!-- 40. Display an iframe. -->
-<iframe
-    src="https://example.com"
-    width="600"
-    height="400">
-</iframe>
-
-<!-- HTML Entities & Attributes -->
-
-<!-- 41. Display the copyright symbol. -->
-<p>&copy; 2026</p>
-
-
-<!-- 42. Display the less-than symbol. -->
-<p>&lt;</p>
-
-
-<!-- 43. Add a tooltip using the title attribute. -->
-<p title="This is a tooltip">
-    Hover over me.
-</p>
-
-
-<!-- 44. Make an input field required. -->
-<input type="text" required>
-
-
-<!-- 45. Disable a button. -->
-<button disabled>
-    Submit
-</button>
-
-<!-- Miscellaneous -->
-
-<!-- 46. Create a button. -->
-<button>Click Me</button>
-
-
-<!-- 47. Create a comment in HTML. -->
-
-<!-- This is an HTML comment -->
-
-
-<!-- 48. Create a progress bar. -->
-<progress value="60" max="100"></progress>
-
-
-<!-- 49. Create a meter element. -->
-<meter value="75" min="0" max="100"></meter>
-
-
-<!-- 50. Display the current date using the time element. -->
-<time datetime="2026-08-04">
-    August 4, 2026
-</time>

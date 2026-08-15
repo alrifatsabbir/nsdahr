@@ -104,29 +104,33 @@ function renderMarkdown(md) {
   return fallbackMarkdownToHtml(md);
 }
 
-// Fallback config if docs.json cannot be fetched
-const DEFAULT_NAV = [
+const DEFAULT_NAV = 
+[
   {
-    section: "Getting Started",
-    pages: [
-      { slug: "introduction", title: "Introduction", file: "../intro/intro.md" },
-      { slug: "installation", title: "Installation & Setup", file: "../intro/install.md" }
+    "section": "Getting Started",
+    "pages": [
+      { "slug": "introduction", "title": "Introduction", "file": "../intro/intro.md" },
+      { "slug": "installation", "title": "Installation & Setup", "file": "../intro/install.md" }
     ]
   },
   {
-    section: "Questions & Answers",
-    pages: [
-      { slug: "html-guide", title: "HTML5 Q&A Guide", file: "../qa-html/html-question.md" },
-      { slug: "css-guide", title: "CSS3 Q&A Guide", file: "../qa-css/css-question.md" },
-      { slug: "javascript-guide", title: "JavaScript Q&A Guide", file: "../qa-js/js-question.md" }
+    "section": "Questions & Answers",
+    "pages": [
+      { "slug": "html-guide", "title": "HTML5 Q&A Guide", "file": "../qa-html/html-question.md" },
+      { "slug": "css-guide", "title": "CSS3 Q&A Guide", "file": "../qa-css/css-question.md" },
+      { "slug": "javascript-guide", "title": "JavaScript Q&A Guide", "file": "../qa-js/js-question.md" },
+      { "slug": "bootstrap-guide", "title": "Bootstrap Q&A Guide", "file": "../qa-bootstrap/bootstrap-question.md" },
+      { "slug": "tailwindcss-guide", "title": "Tailwind CSS Q&A Guide", "file": "../qa-tailwindcss/tailwindcss-question.md" }
     ]
   },
   {
-    section: "Practice & Exam Prep",
-    pages: [
-      { slug: "html-qanda", title: "HTML Practice Set", file: "../qa-html/index.md" },
-      { slug: "css-qanda", title: "CSS Styling Practice", file: "../qa-css/style.md" },
-      { slug: "js-qanda", title: "JS Scripting Practice", file: "../qa-js/script.md" }
+    "section": "Practice & Exam Prep",
+    "pages": [
+      { "slug": "html-qanda", "title": "HTML Practice Set", "file": "../qa-html/index.md" },
+      { "slug": "css-qanda", "title": "CSS Styling Practice", "file": "../qa-css/style.md" },
+      { "slug": "js-qanda", "title": "JS Scripting Practice", "file": "../qa-js/script.md" },
+      { "slug": "bootstrap-qanda", "title": "Bootstrap Practice", "file": "../qa-bootstrap/bootstrap.md" },
+      { "slug": "tailwindcss-qanda", "title": "Tailwind CSS Practice", "file": "../qa-tailwindcss/tailwindcss.md" }
     ]
   }
 ];
@@ -233,7 +237,7 @@ async function renderPage(slug) {
     <span class="text-ink font-semibold">${page.title}</span>
   `;
 
-  const headings = contentEl.querySelectorAll('h2, h3');
+  const headings = contentEl.querySelectorAll('h1, h2');
   tocEl.innerHTML = '';
   headings.forEach(h => {
     const id = slugify(h.textContent);
@@ -241,7 +245,7 @@ async function renderPage(slug) {
     const a = document.createElement('a');
     a.href = '#' + slug + '--' + id;
     a.textContent = h.textContent;
-    a.className = 'toc-link block' + (h.tagName === 'H3' ? ' toc-h3' : '');
+    a.className = 'toc-link block' + (h.tagName === 'H2' ? ' toc-h2' : '');
     a.addEventListener('click', (e) => {
       e.preventDefault();
       h.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -297,7 +301,6 @@ function currentSlugFromHash() {
 
 window.addEventListener('hashchange', () => renderPage(currentSlugFromHash()));
 
-// Init
 (async () => {
   await loadNavConfig();
   renderPage(currentSlugFromHash());
