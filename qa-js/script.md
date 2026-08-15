@@ -2776,9 +2776,6 @@ function applyDefaults(defaults, partial) {
 
 ```javascript
 /**
- * @typedef {{ status: 'red' }} RedState
- * @typedef {{ status: 'yellow' }} YellowState
- * @typedef {{ status: 'green' }} GreenState
  * @typedef {RedState | YellowState | GreenState} TrafficLightState
  */
 
@@ -2829,10 +2826,6 @@ class DataService {
 <h3>176. Implement a Result type for error handling without exceptions.</h3>
 
 ```javascript
-/**
- * @template T
- * @typedef {{ ok: true, value: T } | { ok: false, error: string }} Result
- */
 
 /**
  * @template T
@@ -2954,10 +2947,7 @@ class PluginSystem {
     #plugins = new Map();
     #hooks = new Map();
 
-    /**
-     * Register a plugin.
-     * @param {{ name: string, hooks: Record<string, Function> }} plugin
-     */
+
     register(plugin) {
         if (this.#plugins.has(plugin.name)) throw new Error(`Plugin "${plugin.name}" already registered`);
         this.#plugins.set(plugin.name, plugin);
